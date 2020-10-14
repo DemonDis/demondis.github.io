@@ -7,7 +7,8 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
     <title>ML</title>
-
+    <!-- #FAVICONS -->
+    <link rel="shortcut icon" href="/static/img/favicon.png" type="static/img/png">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/dashboard/">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- Bootstrap core CSS -->
@@ -28,13 +29,16 @@
           font-size: 3.5rem;
         }
       }
+      .sidebar {
+        top:0rem !important;
+      }
     </style>
     <!-- Custom styles for this template -->
     <link href="dashboard.css" rel="stylesheet">
   </head>
   <body>
     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">Company name</a>
+  <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">Машинное обучение</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -44,7 +48,7 @@
   <div class="row">
     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="sidebar-sticky pt-3">
-        <ul class="nav flex-column">
+        <ul class="nav flex-column ">
           <li class="nav-item" onclick="loadTrain()">
             <a class="nav-link active" href="#">
               <span data-feather="book"></span>
@@ -126,6 +130,17 @@
           </tbody>
         </table>
       </div>
+
+      <div>
+        <div id="tableHeading" class="shadow-lg p-3 bg-white rounded">
+            Ответ (log)
+        </div>
+        <div id="logInfo" class="shadow-lg p-3 bg-black rounded overflow-auto" style="height: 600px;">
+            В ожидание ответа
+        </div>
+    </div>
+
+      
     </main>
   </div>
 </div>
