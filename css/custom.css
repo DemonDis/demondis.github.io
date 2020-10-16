@@ -1,0 +1,128 @@
+.img-list-center{
+    display: block;
+    margin: -60px auto 0;
+}
+.bg-main-color{
+    background: linear-gradient(90deg, #F12711 0%, #FD7201 100%);
+}
+.cash-bold{
+    font-size: 2.5rem;
+    color: #000;
+    font-weight: 500;
+}
+.acct-tab .nav-link{
+    background: #fff !important;
+    color: #000 !important; 
+}
+.acct-tab .nav-item .active{
+    background: #F1F1F1 !important;
+}
+.ref-text-xlg{
+    font-size: 2rem;
+    font-weight: 500;
+
+}
+.bold-text{
+    font-weight: 600 !important;
+}
+
+/* Customise thumbnail */
+.thumbnail-container{
+    position: relative; 
+}
+.input-thumbnail{
+    opacity: 0;
+      /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+
+    /* IE 5-7 */
+     filter: alpha(opacity=0);
+
+    /* Netscape */
+    -moz-opacity: 0;
+
+     /* Safari 1.x */
+    -khtml-opacity: 0;
+}
+.thumbnail-container, .input-thumbnail{
+    height: 200px;
+    cursor: pointer;
+}
+.upload-icon{
+    position: absolute;
+    top: 46px;
+    left: 50%;
+    margin-left: -40px;
+    display: inherit;
+    width: 80px;
+}
+
+/* Custom checkbox on image */
+.check-image .custom-control-label{
+    position: unset !important;
+}
+.check-image .custom-control-label:after, .check-image .custom-control-label:before{
+    position: absolute !important;
+    top: .5rem !important;
+    right: .5rem !important;
+    left: auto !important;
+}
+
+.first-list .list-group-item:last-child{
+    border-bottom: 0px;
+}
+
+/* Custom multiple input */
+.custom-multiple-input .select2-container{
+    width: 100% !important;
+    display: block;
+    background-color: #e9ecef!important;
+}
+.multiple-input-n-height .select2-container .select2-selection--multiple{
+    height: 41px !important;
+    padding:.3rem .5rem !important;
+}
+.custom-multiple-input .select2-container .select2-selection--multiple{
+    background-color: #e9ecef!important;
+    border: 1px solid #ced4da;
+    padding: .6rem 1rem;
+    height: 150px;
+}
+.custom-multiple-input .select2-container--bootstrap4 .select2-selection--multiple .select2-selection__choice{
+    padding: .45rem .7rem !important;
+    background:#ffffffe0 !important ;
+    margin: 0 .4rem .4rem 0;
+}
+
+.slider-container {    
+    max-width: 1000px;
+    padding: 2rem 3rem;
+    background: #e6e6e6;
+    margin: 2rem auto 0 auto;
+    overflow: hidden;
+    border-radius: 5px;    
+    position:relative;
+
+}
+.slider-container:before {
+    content: '.slider-container';
+    position: absolute;
+    left: 0;
+}
+
+@media screen and (max-width:600px){
+    .cash-bold{
+        font-size: 1.5rem;
+    }
+    /* justify right for mobile screen */
+    .justify-right-sm{
+        justify-content: start !important;
+    }
+    /* Vendor dashboard>>>>>>>>>>Single-order */
+    .second-list{
+        padding-right: 1rem !important;
+    }
+    .first-list .list-group-item .row p:last-child, .second-list .list-group-item .row p:last-child{
+        text-align: left !important;
+    }
+}
