@@ -13101,7 +13101,7 @@ a.card {
     width: 100%;
     min-height: 100vh;
     min-width: 0;
-    transition: margin-left .3s ease-in-out, left .3s ease-in-out, margin-right .3s ease-in-out, right .3s ease-in-out
+    transition: margin-left .3s ease-in-out, left .3s ease-in-out, margin-right .3s ease-in-out, right .3s ease-in-out;
 }
 
 @media (max-width:991.98px) {
@@ -13455,7 +13455,6 @@ screen and (-ms-high-contrast:active) {
 .sidebar-brand,
 .sidebar-brand:hover {
     padding: 1rem 2.5rem;
-    background: #F12711;
     font-size: 1.175rem;
     font-weight: 500;
     color: #fff;
@@ -13501,7 +13500,8 @@ screen and (-ms-high-contrast:active) {
     flex-direction: column;
     justify-content: flex-start;
     flex: 1;
-    background: #fff
+    background: #fff;
+    padding: 25px 0px 0px 15px;
 }
 
 .sidebar-link,
@@ -14198,18 +14198,20 @@ pre.snippet {
     display: flex;
     overflow: hidden;
     width: 100%;
-    position: relative
+    position: relative;
+    background-image: url(https://learn.zoner.com/wp-content/uploads/2020/02/8c.jpeg?fidl=2019-06-mag-en);
 }
 
 .wrapper:before {
     width: 100%;
-    height: 264px;
-    position: absolute;
+    height: 200px;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-image: url(https://img2.goodfon.ru/original/1920x1080/4/b8/gory-tuman-oblaka-doroga.jpg);
-    content: " "
+    content: " ";
+    background-color: black;
+    opacity: 55%;
 }
 
 .bg-primary-light {
