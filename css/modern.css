@@ -14200,6 +14200,7 @@ pre.snippet {
     width: 100%;
     position: relative;
     background-image: url(https://learn.zoner.com/wp-content/uploads/2020/02/8c.jpeg?fidl=2019-06-mag-en);
+    background-size: cover;
 }
 
 .wrapper:before {
