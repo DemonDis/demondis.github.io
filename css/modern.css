@@ -12814,13 +12814,20 @@ a.card {
 }
 
 .content {
-    margin-top: 3rem;
+    
+    margin: 3rem 12rem 0rem 12rem;
     padding: 0 .5rem
 }
 
 @media (min-width:992px) {
     .content {
         padding: 0 1.5rem
+    }
+}
+
+@media (max-width:1757px) {
+    .content {
+        margin: 3rem 0rem 0rem 0rem;
     }
 }
 
@@ -14199,7 +14206,7 @@ pre.snippet {
     overflow: hidden;
     width: 100%;
     position: relative;
-    background-image: url(https://learn.zoner.com/wp-content/uploads/2020/02/8c.jpeg?fidl=2019-06-mag-en);
+    background-image: url(/static/img/mainBack.jpeg);
     background-size: cover;
 }
 
