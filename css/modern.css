@@ -10,8 +10,6 @@
  */
 
 :root {
-<<<<<<< HEAD
-=======
     --blue: #3b7ddd;
     --indigo: #6610f2;
     --purple: #6f42c1;
@@ -33,7 +31,6 @@
     --light: #e9ecef;
     --dark: #153d77;
     --tertiary: #669ae5;
->>>>>>> 0fc79f79652518ef19c895fa79055cb6588ddae4
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
@@ -82,6 +79,247 @@ body {
     background-color: #f4f7fc
 }
 
+[tabindex="-1"]:focus:not(:focus-visible) {
+    outline: 0!important
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: .5rem
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem
+}
+
+abbr[data-original-title],
+abbr[title] {
+    text-decoration: underline;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+    cursor: help;
+    border-bottom: 0;
+    -webkit-text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none
+}
+
+address {
+    font-style: normal;
+    line-height: inherit
+}
+
+address,
+dl,
+ol,
+ul {
+    margin-bottom: 1rem
+}
+
+dl,
+ol,
+ul {
+    margin-top: 0
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+    margin-bottom: 0
+}
+
+dt {
+    font-weight: 500
+}
+
+dd {
+    margin-bottom: .5rem;
+    margin-left: 0
+}
+
+blockquote {
+    margin: 0 0 1rem
+}
+
+b,
+strong {
+    font-weight: bolder
+}
+
+small {
+    font-size: 80%
+}
+
+sub,
+sup {
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -.25em
+}
+
+sup {
+    top: -.5em
+}
+
+a {
+    color: #3b7ddd;
+    text-decoration: none;
+    background-color: transparent
+}
+
+a:hover {
+    color: #1e58ad;
+    text-decoration: underline
+}
+
+a:not([href]),
+a:not([href]):hover {
+    color: inherit;
+    text-decoration: none
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    font-size: 1em
+}
+
+pre {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: auto
+}
+
+figure {
+    margin: 0 0 1rem
+}
+
+img {
+    border-style: none
+}
+
+img,
+svg {
+    vertical-align: middle
+}
+
+svg {
+    overflow: hidden
+}
+
+table {
+    border-collapse: collapse
+}
+
+caption {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    color: #6c757d;
+    text-align: left;
+    caption-side: bottom
+}
+
+th {
+    text-align: inherit
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem
+}
+
+button {
+    border-radius: 0
+}
+
+button:focus {
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit
+}
+
+button,
+input {
+    overflow: visible
+}
+
+button,
+select {
+    text-transform: none
+}
+
+select {
+    word-wrap: normal
+}
+
+[type=button],
+[type=reset],
+[type=submit],
+button {
+    -webkit-appearance: button
+}
+
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:not(:disabled) {
+    cursor: pointer
+}
+
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+    padding: 0;
+    border-style: none
+}
+
+input[type=checkbox],
+input[type=radio] {
+    box-sizing: border-box;
+    padding: 0
+}
+
+input[type=date],
+input[type=datetime-local],
+input[type=month],
+input[type=time] {
+    -webkit-appearance: listbox
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical
+}
 
 fieldset {
     min-width: 0;
@@ -1570,6 +1808,270 @@ pre code {
     color: #000000
 }
 
+.table td,
+.table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6
+}
+
+.table tbody+tbody {
+    border-top: 2px solid #dee2e6
+}
+
+.table-sm td,
+.table-sm th {
+    padding: .3rem
+}
+
+.table-bordered,
+.table-bordered td,
+.table-bordered th {
+    border: 1px solid #dee2e6
+}
+
+.table-bordered thead td,
+.table-bordered thead th {
+    border-bottom-width: 2px
+}
+
+.table-borderless tbody+tbody,
+.table-borderless td,
+.table-borderless th,
+.table-borderless thead th {
+    border: 0
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa
+}
+
+.table-hover tbody tr:hover {
+    color: #000000;
+    background-color: rgba(0, 0, 0, .075)
+}
+
+.table-primary,
+.table-primary>td,
+.table-primary>th {
+    background-color: #c8dbf5
+}
+
+.table-primary tbody+tbody,
+.table-primary td,
+.table-primary th,
+.table-primary thead th {
+    border-color: #99bbed
+}
+
+.table-hover .table-primary:hover,
+.table-hover .table-primary:hover>td,
+.table-hover .table-primary:hover>th {
+    background-color: #b2cdf1
+}
+
+.table-secondary,
+.table-secondary>td,
+.table-secondary>th {
+    background-color: #d7caee
+}
+
+.table-secondary tbody+tbody,
+.table-secondary td,
+.table-secondary th,
+.table-secondary thead th {
+    border-color: #b49ddf
+}
+
+.table-hover .table-secondary:hover,
+.table-hover .table-secondary:hover>td,
+.table-hover .table-secondary:hover>th {
+    background-color: #c8b7e8
+}
+
+.table-success,
+.table-success>td,
+.table-success>th {
+    background-color: #c3e6cb
+}
+
+.table-success tbody+tbody,
+.table-success td,
+.table-success th,
+.table-success thead th {
+    border-color: #8fd19e
+}
+
+.table-hover .table-success:hover,
+.table-hover .table-success:hover>td,
+.table-hover .table-success:hover>th {
+    background-color: #b1dfbb
+}
+
+.table-info,
+.table-info>td,
+.table-info>th {
+    background-color: #c1f0e2
+}
+
+.table-info tbody+tbody,
+.table-info td,
+.table-info th,
+.table-info thead th {
+    border-color: #8be3c9
+}
+
+.table-hover .table-info:hover,
+.table-hover .table-info:hover>td,
+.table-hover .table-info:hover>th {
+    background-color: #acebd8
+}
+
+.table-warning,
+.table-warning>td,
+.table-warning>th {
+    background-color: #fedbbd
+}
+
+.table-warning tbody+tbody,
+.table-warning td,
+.table-warning th,
+.table-warning thead th {
+    border-color: #febc85
+}
+
+.table-hover .table-warning:hover,
+.table-hover .table-warning:hover>td,
+.table-hover .table-warning:hover>th {
+    background-color: #fecda4
+}
+
+.table-danger,
+.table-danger>td,
+.table-danger>th {
+    background-color: #f5c6cb
+}
+
+.table-danger tbody+tbody,
+.table-danger td,
+.table-danger th,
+.table-danger thead th {
+    border-color: #ed969e
+}
+
+.table-hover .table-danger:hover,
+.table-hover .table-danger:hover>td,
+.table-hover .table-danger:hover>th {
+    background-color: #f1b0b7
+}
+
+.table-light,
+.table-light>td,
+.table-light>th {
+    background-color: #f9fafb
+}
+
+.table-light tbody+tbody,
+.table-light td,
+.table-light th,
+.table-light thead th {
+    border-color: #f4f5f7
+}
+
+.table-hover .table-light:hover,
+.table-hover .table-light:hover>td,
+.table-hover .table-light:hover>th {
+    background-color: #eaedf1
+}
+
+.table-dark,
+.table-dark>td,
+.table-dark>th {
+    background-color: #bdc9d9
+}
+
+.table-dark tbody+tbody,
+.table-dark td,
+.table-dark th,
+.table-dark thead th {
+    border-color: #859ab8
+}
+
+.table-hover .table-dark:hover,
+.table-hover .table-dark:hover>td,
+.table-hover .table-dark:hover>th {
+    background-color: #adbcd0
+}
+
+.table-tertiary,
+.table-tertiary>td,
+.table-tertiary>th {
+    background-color: #d4e3f8
+}
+
+.table-tertiary tbody+tbody,
+.table-tertiary td,
+.table-tertiary th,
+.table-tertiary thead th {
+    border-color: #b0caf1
+}
+
+.table-hover .table-tertiary:hover,
+.table-hover .table-tertiary:hover>td,
+.table-hover .table-tertiary:hover>th {
+    background-color: #bed5f4
+}
+
+.table-active,
+.table-active>td,
+.table-active>th,
+.table-hover .table-active:hover,
+.table-hover .table-active:hover>td,
+.table-hover .table-active:hover>th {
+    background-color: rgba(0, 0, 0, .075)
+}
+
+.table .thead-dark th {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #454d55
+}
+
+.table .thead-light th {
+    color: #495057;
+    background-color: #e9ecef;
+    border-color: #dee2e6
+}
+
+.table-dark {
+    color: #fff;
+    background-color: #343a40
+}
+
+.table-dark td,
+.table-dark th,
+.table-dark thead th {
+    border-color: #454d55
+}
+
+.table-dark.table-bordered {
+    border: 0
+}
+
+.table-dark.table-striped tbody tr:nth-of-type(odd) {
+    background-color: hsla(0, 0%, 100%, .05)
+}
+
+.table-dark.table-hover tbody tr:hover {
+    color: #fff;
+    background-color: hsla(0, 0%, 100%, .075)
+}
+
 @media (max-width:575.98px) {
     .table-responsive-sm {
         display: block;
@@ -1657,16 +2159,10 @@ pre code {
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
 }
 
-<<<<<<< HEAD
 @media (prefers-reduced-motion:reduce) {
     .form-control {
         transition: none
     }
-=======
-.table-hover tbody tr:hover {
-    color: #000000;
-    background-color: rgba(0, 0, 0, .075)
->>>>>>> 0fc79f79652518ef19c895fa79055cb6588ddae4
 }
 
 .form-control::-ms-expand {
@@ -13705,143 +14201,424 @@ div.dt-buttons div.btn.processing:after {
     filter: alpha(opacity=20)
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg)
-    }
-    to {
-        transform: rotate(1turn)
-    }
+
+/*!
+ * FullCalendar v3.10.1
+ * Docs & License: https://fullcalendar.io/
+ * (c) 2019 Adam Shaw
+ */
+
+.fc {
+    direction: ltr;
+    text-align: left
 }
 
-.input-group [data-toggle=datetimepicker] {
+.fc-rtl {
+    text-align: right
+}
+
+body .fc {
+    font-size: 1em
+}
+
+.fc-highlight {
+    background: #bce8f1;
+    opacity: .3
+}
+
+.fc-bgevent {
+    background: #8fdf82;
+    opacity: .3
+}
+
+.fc-nonbusiness {
+    background: #d7d7d7
+}
+
+.fc button {
+    box-sizing: border-box;
+    margin: 0;
+    height: 2.1em;
+    padding: 0 .6em;
+    font-size: 1em;
+    white-space: nowrap;
     cursor: pointer
 }
 
-.toast-title {
-    font-weight: 700
+.fc button::-moz-focus-inner {
+    margin: 0;
+    padding: 0
 }
 
-.toast-message {
-    -ms-word-wrap: break-word;
-    word-wrap: break-word
+.fc-state-default {
+    border: 1px solid
 }
 
-.toast-message a,
-.toast-message label {
-    color: #fff
+.fc-state-default.fc-corner-left {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px
 }
 
-.toast-message a:hover {
-    color: #ccc;
+.fc-state-default.fc-corner-right {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px
+}
+
+.fc button .fc-icon {
+    position: relative;
+    top: -.05em;
+    margin: 0 .2em;
+    vertical-align: middle
+}
+
+.fc-state-default {
+    background-color: #f5f5f5;
+    background-image: linear-gradient(180deg, #fff, #e6e6e6);
+    background-repeat: repeat-x;
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-color: rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) rgba(0, 0, 0, .25);
+    color: #333;
+    text-shadow: 0 1px 1px hsla(0, 0%, 100%, .75);
+    box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, .2), 0 1px 2px rgba(0, 0, 0, .05)
+}
+
+.fc-state-active,
+.fc-state-disabled,
+.fc-state-down,
+.fc-state-hover {
+    color: #333;
+    background-color: #e6e6e6
+}
+
+.fc-state-hover {
+    color: #333;
+    text-decoration: none;
+    background-position: 0 -15px;
+    transition: background-position .1s linear
+}
+
+.fc-state-active,
+.fc-state-down {
+    background-color: #ccc;
+    background-image: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, .15), 0 1px 2px rgba(0, 0, 0, .05)
+}
+
+.fc-state-disabled {
+    cursor: default;
+    background-image: none;
+    opacity: .65;
+    box-shadow: none
+}
+
+.fc-button-group {
+    display: inline-block
+}
+
+.fc .fc-button-group>* {
+    float: left;
+    margin: 0 0 0 -1px
+}
+
+.fc .fc-button-group>:first-child {
+    margin-left: 0
+}
+
+.fc-popover {
+    position: absolute;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .15)
+}
+
+.fc-popover .fc-header {
+    padding: 2px 4px
+}
+
+.fc-popover .fc-header .fc-title {
+    margin: 0 2px
+}
+
+.fc-popover .fc-header .fc-close {
+    cursor: pointer
+}
+
+.fc-ltr .fc-popover .fc-header .fc-title,
+.fc-rtl .fc-popover .fc-header .fc-close {
+    float: left
+}
+
+.fc-ltr .fc-popover .fc-header .fc-close,
+.fc-rtl .fc-popover .fc-header .fc-title {
+    float: right
+}
+
+.fc-divider {
+    border-style: solid;
+    border-width: 1px
+}
+
+hr.fc-divider {
+    height: 0;
+    margin: 0;
+    padding: 0 0 2px;
+    border-width: 1px 0
+}
+
+.fc-clear {
+    clear: both
+}
+
+.fc-bg,
+.fc-bgevent-skeleton,
+.fc-helper-skeleton,
+.fc-highlight-skeleton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0
+}
+
+.fc-bg {
+    bottom: 0
+}
+
+.fc-bg table {
+    height: 100%
+}
+
+.fc table {
+    width: 100%;
+    box-sizing: border-box;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 1em
+}
+
+.fc th {
+    text-align: center
+}
+
+.fc td,
+.fc th {
+    border-style: solid;
+    border-width: 1px;
+    padding: 0;
+    vertical-align: top
+}
+
+.fc td.fc-today {
+    border-style: double
+}
+
+a[data-goto] {
+    cursor: pointer
+}
+
+a[data-goto]:hover {
+    text-decoration: underline
+}
+
+.fc .fc-row {
+    border-style: solid;
+    border-width: 0
+}
+
+.fc-row table {
+    border-left: 0 hidden transparent;
+    border-right: 0 hidden transparent;
+    border-bottom: 0 hidden transparent
+}
+
+.fc-row:first-child table {
+    border-top: 0 hidden transparent
+}
+
+.fc-row {
+    position: relative
+}
+
+.fc-row .fc-bg {
+    z-index: 1
+}
+
+.fc-row .fc-bgevent-skeleton,
+.fc-row .fc-highlight-skeleton {
+    bottom: 0
+}
+
+.fc-row .fc-bgevent-skeleton table,
+.fc-row .fc-highlight-skeleton table {
+    height: 100%
+}
+
+.fc-row .fc-bgevent-skeleton td,
+.fc-row .fc-highlight-skeleton td {
+    border-color: transparent
+}
+
+.fc-row .fc-bgevent-skeleton {
+    z-index: 2
+}
+
+.fc-row .fc-highlight-skeleton {
+    z-index: 3
+}
+
+.fc-row .fc-content-skeleton {
+    position: relative;
+    z-index: 4;
+    padding-bottom: 2px
+}
+
+.fc-row .fc-helper-skeleton {
+    z-index: 5
+}
+
+.fc .fc-row .fc-content-skeleton table,
+.fc .fc-row .fc-content-skeleton td,
+.fc .fc-row .fc-helper-skeleton td {
+    background: none;
+    border-color: transparent
+}
+
+.fc-row .fc-content-skeleton td,
+.fc-row .fc-helper-skeleton td {
+    border-bottom: 0
+}
+
+.fc-row .fc-content-skeleton tbody td,
+.fc-row .fc-helper-skeleton tbody td {
+    border-top: 0
+}
+
+.fc-scroller {
+    -webkit-overflow-scrolling: touch
+}
+
+.fc-scroller>.fc-day-grid,
+.fc-scroller>.fc-time-grid {
+    position: relative;
+    width: 100%
+}
+
+.fc-event {
+    position: relative;
+    display: block;
+    font-size: .85em;
+    line-height: 1.3;
+    border-radius: 3px;
+    border: 1px solid #3a87ad
+}
+
+.fc-event,
+.fc-event-dot {
+    background-color: #3a87ad
+}
+
+.fc-event,
+.fc-event:hover {
+    color: #fff;
     text-decoration: none
 }
 
-.toast-close-button {
+.fc-event.fc-draggable,
+.fc-event[href] {
+    cursor: pointer
+}
+
+.fc-not-allowed,
+.fc-not-allowed .fc-event {
+    cursor: not-allowed
+}
+
+.fc-event .fc-bg {
+    z-index: 1;
+    background: #fff;
+    opacity: .25
+}
+
+.fc-event .fc-content {
     position: relative;
-    right: -.3em;
-    top: -.3em;
-    float: right;
-    font-size: 20px;
-    font-weight: 700;
-    color: #fff;
-    -webkit-text-shadow: 0 1px 0 #fff;
-    text-shadow: 0 1px 0 #fff;
-    opacity: .8;
-    -ms-filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=80);
-    filter: alpha(opacity=80)
+    z-index: 2
 }
 
-.toast-close-button:focus,
-.toast-close-button:hover {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-    opacity: .4;
-    -ms-filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=40);
-    filter: alpha(opacity=40)
+.fc-event .fc-resizer {
+    position: absolute;
+    z-index: 4;
+    display: none
 }
 
-button.toast-close-button {
-    padding: 0;
-    cursor: pointer;
-    background: transparent;
-    border: 0;
-    -webkit-appearance: none
+.fc-event.fc-allow-mouse-resize .fc-resizer,
+.fc-event.fc-selected .fc-resizer {
+    display: block
 }
 
-@media (max-width:240px) {
-    #toast-container>div {
-        padding: 8px 8px 8px 50px;
-        width: 11em
-    }
-    #toast-container .toast-close-button {
-        right: -.2em;
-        top: -.2em
-    }
+.fc-event.fc-selected .fc-resizer:before {
+    content: "";
+    position: absolute;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin-left: -20px;
+    margin-top: -20px
 }
 
-@media (min-width:241px) and (max-width:480px) {
-    #toast-container>div {
-        padding: 8px 8px 8px 50px;
-        width: 18em
-    }
-    #toast-container .toast-close-button {
-        right: -.2em;
-        top: -.2em
-    }
+.fc-event.fc-selected {
+    z-index: 9999!important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2)
 }
 
-@media (min-width:481px) and (max-width:768px) {
-    #toast-container>div {
-        padding: 15px 15px 15px 50px;
-        width: 25em
-    }
+.fc-event.fc-selected.fc-dragging {
+    box-shadow: 0 2px 7px rgba(0, 0, 0, .3)
 }
 
-@font-face {
-    font-family: Font Awesome\ 5 Free;
-    font-style: normal;
-    font-weight: 400;
-    font-display: block;
-    src: url(../fonts/fa-regular-400.eot);
-    src: url(../fonts/fa-regular-400d41d.eot?#iefix) format("embedded-opentype"), url(../fonts/fa-regular-400.woff2) format("woff2"), url(../fonts/fa-regular-400.woff) format("woff"), url(../fonts/fa-regular-400.ttf) format("truetype"), url(../fonts/fa-regular-400.svg#fontawesome) format("svg")
+.fc-h-event.fc-selected:before {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    top: -10px;
+    bottom: -10px;
+    left: 0;
+    right: 0
 }
 
-.far {
-    font-weight: 400
+.fc-ltr .fc-h-event.fc-not-start,
+.fc-rtl .fc-h-event.fc-not-end {
+    margin-left: 0;
+    border-left-width: 0;
+    padding-left: 1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0
 }
 
-@font-face {
-    font-family: Font Awesome\ 5 Free;
-    font-style: normal;
-    font-weight: 900;
-    font-display: block;
-    src: url(../fonts/fa-solid-900.eot);
-    src: url(../fonts/fa-solid-900d41d.eot?#iefix) format("embedded-opentype"), url(../fonts/fa-solid-900.woff2) format("woff2"), url(../fonts/fa-solid-900.woff) format("woff"), url(../fonts/fa-solid-900.ttf) format("truetype"), url(../fonts/fa-solid-900.svg#fontawesome) format("svg")
+.fc-ltr .fc-h-event.fc-not-end,
+.fc-rtl .fc-h-event.fc-not-start {
+    margin-right: 0;
+    border-right-width: 0;
+    padding-right: 1px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0
 }
 
-.fa,
-.far,
-.fas {
-    font-family: Font Awesome\ 5 Free
+.fc-ltr .fc-h-event .fc-start-resizer,
+.fc-rtl .fc-h-event .fc-end-resizer {
+    cursor: w-resize;
+    left: -1px
 }
 
-.fa,
-.fas {
-    font-weight: 900
+.fc-ltr .fc-h-event .fc-end-resizer,
+.fc-rtl .fc-h-event .fc-start-resizer {
+    cursor: e-resize;
+    right: -1px
 }
 
-@font-face {
-    font-family: Font Awesome\ 5 Brands;
-    font-style: normal;
-    font-weight: 400;
-    font-display: block;
-    src: url(../fonts/fa-brands-400.eot);
-    src: url(../fonts/fa-brands-400d41d.eot?#iefix) format("embedded-opentype"), url(../fonts/fa-brands-400.woff2) format("woff2"), url(../fonts/fa-brands-400.woff) format("woff"), url(../fonts/fa-brands-400.ttf) format("truetype"), url(../fonts/fa-brands-400.svg#fontawesome) format("svg")
+.fc-h-event.fc-allow-mouse-resize .fc-resizer {
+    width: 7px;
+    top: -1px;
+    bottom: -1px
 }
-<<<<<<< HEAD
-=======
 
 .fc-h-event.fc-selected .fc-resizer {
     border-radius: 4px;
@@ -29675,4 +30452,3 @@ button.toast-close-button {
 .sw-theme-arrows>ul.step-anchor>li a:hover:after {
     border-left-color: #fff
 }
->>>>>>> 0fc79f79652518ef19c895fa79055cb6588ddae4
