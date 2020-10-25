@@ -140,3 +140,7 @@
     box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .05);
     z-index: 1
 }
+
+.alert {
+    margin-bottom: 0rem;
+}
