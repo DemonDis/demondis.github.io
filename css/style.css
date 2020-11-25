@@ -8298,3 +8298,14 @@ a[data-toggle="collapse"] {
     background: #2f89fc;
     border-bottom: 1px solid #2f89fc;
   }
+
+.card_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card_inner > span {
+    font-size: 25px;
+
+}
