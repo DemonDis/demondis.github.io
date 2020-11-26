@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>ML_v2</title>
+    
     <!-- #FAVICONS -->
     <link rel="shortcut icon" href="/static/img/favicon.png" type="static/img/png">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
@@ -27,13 +28,13 @@
                   <a href="#"><span class="fa fa-cloud"></span>Прогноз</a>
               </li>
               <li>
-                <a href="#"><span class="fa fa-dollar"></span>Оценка</a>
+                <a href="#"><span class="fa fa-cog"></span>Оценка</a>
               </li>
             </ul>
         </nav>
 
         <!-- Page Content  -->
-        <div id="content" class="p-4 p-md-5 shadow-lg p-3 mb-5 bg-white rounded">
+        <div id="content" class="p-4 p-md-5 shadow-lg p-3 mb-0 bg-white rounded">
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
               <button type="button" id="sidebarCollapse" class="btn btn-dark">
@@ -123,7 +124,7 @@
                                               <button type="button" class="btn-dark btn-sm" disabled>ACC</button>
                                           </div>
                                           <div class="col-4">
-                                              <div >0.89383838383</div>
+                                            <h6 class="my-0 btn-sm shadow-sm rounded" style="font-size: 14px; background-color: rgba(0, 0, 0, 0.03); color: black; border: 1px solid rgb(35,39,43);">0.89383838383</h6>
                                           </div>
                                       </div>
                                   </div>
@@ -186,26 +187,59 @@
                           </div>
                       </div>
                   </div>
-                  
+
                   <!-- Log -->
-                  <div class="row mx-0 pt-3" style="display: none;">
-                    <div class="col-12">
-                      <div id="tableHeading" class="shadow-lg p-3 bg-white rounded">Ответ (log)</div>
-                      <div id="logInfo" class="shadow-lg p-3 bg-black rounded overflow-auto" style="height: 270px;">В ожидание ответа</div>
+                  <div class="col-11 col-sm-11 col-md-12 col-lg-12 col-xl pt-3" style="padding-left: 0px;">
+                    <div class="row mx-0 shadow-sm bg-white rounded pb-0">
+                        <div class="card shadow-none w-100">
+                            <div class="card-header px-4 pb-0">
+                                <h2 id="tableHeading" class="card-title" style="font-size: 28px;">Ответы (log)</h2>
+                            </div>
+                              <div id="tableHeading" class="card-body overflow-auto" style="height: 270px;">
+                                0: 'Wed Sep 30 13:16:20 2020 : начало<br />', 
+                                1: 'Wed Sep 30 13:16:20 2020 : init end mod<br />', 
+                                2: 'Wed Sep 30 13:16:20 2020 : модель оценка<br />', 
+                                3: 'Wed Sep 30 13:16:20 2020 : eval start<br />', 
+                                4: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/models_n<br />', 
+                                5: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/eval<br />', 
+                                6: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/eval<br />', 
+                                7: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/output<br />', 
+                                8: 'Wed Sep 30 13:16:20 2020 : eval step1<br />', 
+                                9: 'Wed Sep 30 13:16:20 2020 : eval step2<br />', 
+                                10: 'Wed Sep 30 13:16:20 2020 : eval step3<br />', 
+                                11: 'Wed Sep 30 13:16:20 2020 : read_all<br />',
+                                0: 'Wed Sep 30 13:16:20 2020 : начало<br />', 
+                                1: 'Wed Sep 30 13:16:20 2020 : init end mod<br />', 
+                                2: 'Wed Sep 30 13:16:20 2020 : модель оценка<br />', 
+                                3: 'Wed Sep 30 13:16:20 2020 : eval start<br />', 
+                                4: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/models_n<br />', 
+                                5: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/eval<br />', 
+                                6: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/eval<br />', 
+                                7: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/output<br />', 
+                                8: 'Wed Sep 30 13:16:20 2020 : eval step1<br />', 
+                                9: 'Wed Sep 30 13:16:20 2020 : eval step2<br />', 
+                                10: 'Wed Sep 30 13:16:20 2020 : eval step3<br />', 
+                                11: 'Wed Sep 30 13:16:20 2020 : read_all<br />',
+                              </div>
+                        </div>
                     </div>
                   </div>
                   <!-- Log -->
 
                 </div>
+                <!-- Table -->
+
               </div>
+
         </div>
   </div>
-  <footer class="footer">
-  </footer>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
     <!-- jQuery and JS bundle w/ Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <!-- Me JS -->
     <script src="js/main.js"></script>
+    <script src="js/ml.js"></script>
   </body>
 </html>
