@@ -15,20 +15,20 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body onload="loadParams(); loadAccuracy(); loadMatrix(); loadLog();">
 		
     <div class="wrapper d-flex align-items-stretch">
         <nav id="sidebar" class="active">
             <div class="img bg-wrap text-center py-4" style="background-image: url(images/bg_1.jpg); height: 80px;"></div>
             <ul class="list-unstyled components mb-5">
               <li class="active">
-                <a href="#"><span class="fa fa-leanpub"></span>Обучение</a>
+                <a onclick="loadTrain()"><span class="fa fa-leanpub"></span>Обучение</a>
               </li>
               <li>
-                  <a href="#"><span class="fa fa-cloud"></span>Прогноз</a>
+                  <a onclick="loadBatch()"><span class="fa fa-cloud"></span>Прогноз</a>
               </li>
               <li>
-                <a href="#"><span class="fa fa-cog"></span>Оценка</a>
+                <a onclick="loadEvaluate()"><span class="fa fa-cog"></span>Оценка</a>
               </li>
             </ul>
         </nav>
@@ -189,11 +189,11 @@
                   </div>
 
                   <!-- Log -->
-                  <div class="col-11 col-sm-11 col-md-12 col-lg-12 col-xl pt-3" style="padding-left: 0px;">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl pt-3" style="padding-left: 0px;">
                     <div class="row mx-0 shadow-sm bg-white rounded pb-0">
                         <div class="card shadow-none w-100">
                             <div class="card-header px-4 pb-0">
-                                <h2 id="tableHeading" class="card-title" style="font-size: 28px;">Ответы (log)</h2>
+                                <h2 id="tableHeading" class="card-title" style="font-size: 28px;">Логи</h2>
                             </div>
                               <div id="tableHeading" class="card-body overflow-auto" style="height: 270px;">
                                 0: 'Wed Sep 30 13:16:20 2020 : начало<br />', 

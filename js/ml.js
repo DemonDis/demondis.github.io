@@ -1,6 +1,6 @@
 
         function loadTrain(){
-            document.getElementById('tableHeading').innerHTML="Ответ (log) - Обучение";
+            document.getElementById('tableHeading').innerHTML=`<span class="fa fa-leanpub"></span> Логи обучения`;
             BlockButton ()
             // 1. Создаём новый XMLHttpRequest-объект
             let xhr = new XMLHttpRequest(); // у конструктора нет аргументов
@@ -21,7 +21,7 @@
         }
 
         function loadBatch(){
-            document.getElementById('tableHeading').innerHTML="Ответ (log) - Прогноз";
+            document.getElementById('tableHeading').innerHTML=`<span class="fa fa-cloud"></span> Логи прогноза`;
             BlockButton ()
             let xhr = new XMLHttpRequest();
             // xhr.open("GET", "http://192.168.91.48:5000/batch_inf", true);
@@ -38,7 +38,7 @@
         }
 
         function loadEvaluate(){
-            document.getElementById('tableHeading').innerHTML="Ответ (log) - Оценка";
+            document.getElementById('tableHeading').innerHTML=`<span class="fa fa-cog"></span> Логи оценки`;
             BlockButton ()
             let xhr = new XMLHttpRequest();
             // xhr.open("GET", "http://192.168.91.48:5000/evaluate", true);
