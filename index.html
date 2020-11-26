@@ -43,7 +43,7 @@
             </div>
           </nav>
 
-          <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <div class="alert alert-info alert-dismissible fade show" role="alert">
               <strong>Уведомления!!!</strong>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -58,8 +58,8 @@
                         <ul class="list-group shadow-sm bg-white rounded mb-3">
                           <li class="list-group-item d-flex justify-content-between lh-condensed">
                             <div class="">
-                              <h5>Данные для обучения модели</h5>
-                              <h6 class="my-0"><i class="fa fa-folder-open"></i>:/home/sav/nn/data/dbn</h6>
+                              <h5 style="font-size: 18px;">Данные для обучения модели</h5>
+                              <h6 class="my-0" style="font-size: 14px;"><i class="fa fa-folder-open"></i>:/home/sav/nn/data/dbn</h6>
                               <!-- <p class="icon-container">
                                 <i class="fa fa-folder" style="font-size:25px;color:white"></i>
                               </p> -->
@@ -70,8 +70,8 @@
                           <ul class="list-group shadow-sm bg-white rounded mb-3">
                             <li class="list-group-item d-flex justify-content-between lh-condensed">
                               <div class="">
-                                <h5>Файлы обученной модели</h5>
-                                <h6 class="my-0"><i class="fa fa-folder-open"></i>:/home/sav/nn/data/models_nt</h6>
+                                <h5 style="font-size: 18px;">Файлы обученной модели</h5>
+                                <h6 class="my-0" style="font-size: 14px;"><i class="fa fa-folder-open"></i>:/home/sav/nn/data/models_nt</h6>
                               </div>
                             </li>
                           </ul>
@@ -79,8 +79,8 @@
                           <ul class="list-group shadow-sm bg-white rounded mb-3">
                             <li class="list-group-item d-flex justify-content-between lh-condensed">
                               <div class="">
-                                <h5>Данные для прогноза</h5>
-                                <h6 class="my-0"><i class="fa fa-folder-open"></i>:/home/sav/nn/data/input</h6>
+                                <h5 style="font-size: 18px;">Данные для прогноза</h5>
+                                <h6 class="my-0" style="font-size: 14px;"><i class="fa fa-folder-open"></i>:/home/sav/nn/data/input</h6>
                               </div>
                             </li>
                           </ul>
@@ -88,8 +88,8 @@
                           <ul class="list-group shadow-sm bg-white rounded mb-3">
                             <li class="list-group-item d-flex justify-content-between lh-condensed">
                               <div class="">
-                                <h5>Результаты прогноза</h5>
-                                <h6 class="my-0"><i class="fa fa-folder-open"></i>:/home/sav/nn/data/output</h6>
+                                <h5 style="font-size: 18px;">Результаты прогноза</h5>
+                                <h6 class="my-0" style="font-size: 14px;"><i class="fa fa-folder-open"></i>:/home/sav/nn/data/output</h6>
                               </div>
                             </li>
                           </ul>
@@ -97,8 +97,8 @@
                           <ul class="list-group shadow-sm bg-white rounded mb-3">
                             <li class="list-group-item d-flex justify-content-between lh-condensed">
                               <div class="">
-                                <h5>Данные для оценки метрик</h5>
-                                <h6 class="my-0"><i class="fa fa-folder-open"></i>:/home/sav/nn/data/eval</h6>
+                                <h5 style="font-size: 18px;">Данные для оценки метрик</h5>
+                                <h6 class="my-0" style="font-size: 14px;"><i class="fa fa-folder-open"></i>:/home/sav/nn/data/eval</h6>
                               </div>
                             </li>
                           </ul>
@@ -115,6 +115,20 @@
                               <h2 class="card-title" style="font-size: 28px;">Матрица результатов</h2>
                           </div>
                           <div class="card-body">
+                                <!-- Accuracy Number -->
+                                <div class="row pb-3 pl-3 justify-content-start">
+                                  <div class="col-md-8">
+                                      <div class="row row align-items-center">
+                                          <div class="col-1.5">
+                                              <button type="button" class="btn-dark btn-sm" disabled>ACC</button>
+                                          </div>
+                                          <div class="col-4">
+                                              <div >0.89383838383</div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <!-- Accuracy Number -->
                               <table id="datatables-buttons" class="table table-bordered table-striped table-hover font-size-md shadow-sm bg-white rounded"
                                   style="width:100%">
                                   <thead>
