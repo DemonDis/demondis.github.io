@@ -1,11 +1,4 @@
-        $(function(){
-            $('.alert').on('close.bs.alert', function(){
-                $('.result').append('<li>Сейчас будет закрыто сообщение (alert)</li>');
-            });
-            $('.alert').on('closed.bs.alert', function(){
-                $('.result').append('<li>Сообщение (alert) уже закрыто</li>');
-            });
-        });
+
         function addIConFolder (functionName) {
             var elements = document.querySelectorAll('.icon-set')
             for(var i = 0; i < elements.length; i++) {
@@ -71,7 +64,7 @@
             document.getElementById('logHeading').innerHTML=`<span class="fa fa-leanpub"></span> Логи обучения`;
             document.getElementById('tableHeading').innerHTML=`<span class="fa fa-leanpub"></span> Матрица результатов обучения`;
             addIConFolder ('loadTrain')
-            BlockButton ()
+            BlockButton ('loadTrain')
             let xhr = new XMLHttpRequest();
             xhr.open("GET", "/train", true);
             xhr.send();
@@ -86,7 +79,7 @@
             document.getElementById('logHeading').innerHTML=`<span class="fa fa-cloud"></span> Логи прогноза`;
             document.getElementById('tableHeading').innerHTML=`<span class="fa fa-cloud"></span> Матрица результатов прогноза`;
             addIConFolder ('loadBatch')
-            BlockButton ()
+            BlockButton ('loadBatch')
             let xhr = new XMLHttpRequest();
             xhr.open("GET", "/batch_inf", true);
             xhr.send();
@@ -101,7 +94,7 @@
             document.getElementById('logHeading').innerHTML=`<span class="fa fa-cog"></span> Логи оценки`;
             document.getElementById('tableHeading').innerHTML=`<span class="fa fa-cog"></span> Матрица результатов оценки`;
             addIConFolder ('loadEvaluate')
-            BlockButton ()
+            BlockButton ('loadEvaluate')
             let xhr = new XMLHttpRequest();
             xhr.open("GET", "/evaluate", true);
             xhr.send();
@@ -234,7 +227,7 @@
             }
         }
 
-        function loadBlock(nameHeader){
+        function loadBlock(nameFunction){
             let xhr = new XMLHttpRequest();
             // xhr.open("GET", "http://192.168.91.48:5000/block", true);
             xhr.open("GET", "/block", true);
@@ -283,8 +276,20 @@
             console.log('UnBlock Button');
         }
 
-        function BlockButton (){
+        function BlockButton (nameFunction){ 
+            if (nameFunction === 'loadTrain') {
+                // document.getElementById('buttonLoadBatch').setAttribute("style", "background:#fc7979;");
+                // document.getElementById('buttonLoadBatch').setAttribute("style", "background:#fc7979;");
+                // document.getElementById('buttonLoadEvaluate').setAttribute("style", "background:#fc7979;");
+            } else if (nameFunction === 'loadBatch') {
+                // document.getElementById('buttonLoadTrain').setAttribute("style", "background:#fc7979;");
+                // document.getElementById('buttonLoadEvaluate').setAttribute("style", "background:#fc7979;");
+            } else if (nameFunction === 'loadEvaluate') {
+                // document.getElementById('buttonLoadBatch').setAttribute("style", "background:#fc7979;");
+                // document.getElementById('buttonLoadTrain').setAttribute("style", "background:#fc7979;");
+            }
                 $(".alert").alert('show')
+
             // setTimeout(() =>
             //     $(".alert").alert('close') 
             // , 3000);
