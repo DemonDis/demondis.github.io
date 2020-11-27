@@ -2,11 +2,32 @@
             var elements = document.querySelectorAll('.icon-set')
             for(var i = 0; i < elements.length; i++) {
                 if (functionName === 'loadTrain'){
-                    elements[i].innerHTML=`<p class="icon-container"><i class="fa fa-leanpub" style="font-size:18px;color:white"></i></p>`
+                    elements[i].innerHTML=`<p class="icon-container"><i class="fa fa-leanpub"
+                    style="font-size:18px;
+                    color:white;
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                    top: 50%;
+                    left: 50%;
+                    "></i></p>`
                 } else if (functionName === 'loadBatch') {
-                    elements[i].innerHTML=`<p class="icon-container"><i class="fa fa-cloud" style="font-size:18px;color:white"></i></p>`
+                    elements[i].innerHTML=`<p class="icon-container"><i class="fa fa-cloud"
+                    style="font-size:18px;
+                    color:white;
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                    top: 50%;
+                    left: 50%;
+                    "></i></p>`
                 } else if (functionName === 'loadEvaluate') {
-                    elements[i].innerHTML=`<p class="icon-container"><i class="fa fa-cog" style="font-size:18px;color:white"></i></p>`
+                    elements[i].innerHTML=`<p class="icon-container"><i class="fa fa-cog"
+                    style="font-size:18px;
+                    color:white;
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                    top: 50%;
+                    left: 50%;
+                    "></i></p>`
                 }
             }
         }
