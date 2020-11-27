@@ -2,32 +2,59 @@
             var elements = document.querySelectorAll('.icon-set')
             for(var i = 0; i < elements.length; i++) {
                 if (functionName === 'loadTrain'){
-                    elements[i].innerHTML=`<p class="icon-container"><i class="fa fa-leanpub"
-                    style="font-size:18px;
-                    color:white;
-                    position: absolute;
-                    transform: translate(-50%, -50%);
-                    top: 50%;
-                    left: 50%;
-                    "></i></p>`
+                    elements[i].innerHTML=`<p class="icon-container" style="
+                                                position: relative;
+                                                width: 30px;
+                                                height: 30px;
+                                                background: rgb(35,39,43);
+                                                background: linear-gradient(60deg, rgba(35,39,43,1) 0%, rgba(209,210,210,1) 89%, rgba(255,255,255,1) 100%); 
+                                                border-radius: 50%;
+                                                margin: auto;
+                                            ">
+                                            <i class="fa fa-leanpub"
+                                                style="font-size:18px;
+                                                color:white;
+                                                position: absolute;
+                                                transform: translate(-50%, -50%);
+                                                top: 50%;
+                                                left: 50%;
+                                            "></i></p>`
                 } else if (functionName === 'loadBatch') {
-                    elements[i].innerHTML=`<p class="icon-container"><i class="fa fa-cloud"
-                    style="font-size:18px;
-                    color:white;
-                    position: absolute;
-                    transform: translate(-50%, -50%);
-                    top: 50%;
-                    left: 50%;
-                    "></i></p>`
+                    elements[i].innerHTML=`<p class="icon-container" style="
+                                                position: relative;
+                                                width: 30px;
+                                                height: 30px;
+                                                background: rgb(35,39,43);
+                                                background: linear-gradient(60deg, rgba(35,39,43,1) 0%, rgba(209,210,210,1) 89%, rgba(255,255,255,1) 100%); 
+                                                border-radius: 50%;
+                                                margin: auto;
+                                            ">
+                                            <i class="fa fa-cloud"
+                                                style="font-size:18px;
+                                                color:white;
+                                                position: absolute;
+                                                transform: translate(-50%, -50%);
+                                                top: 50%;
+                                                left: 50%;
+                                            "></i></p>`
                 } else if (functionName === 'loadEvaluate') {
-                    elements[i].innerHTML=`<p class="icon-container"><i class="fa fa-cog"
-                    style="font-size:18px;
-                    color:white;
-                    position: absolute;
-                    transform: translate(-50%, -50%);
-                    top: 50%;
-                    left: 50%;
-                    "></i></p>`
+                    elements[i].innerHTML=`<p class="icon-container" style="
+                                                position: relative;
+                                                width: 30px;
+                                                height: 30px;
+                                                background: rgb(35,39,43);
+                                                background: linear-gradient(60deg, rgba(35,39,43,1) 0%, rgba(209,210,210,1) 89%, rgba(255,255,255,1) 100%); 
+                                                border-radius: 50%;
+                                                margin: auto;
+                                            ">
+                                            <i class="fa fa-cog"
+                                                style="font-size:18px;
+                                                color:white;
+                                                position: absolute;
+                                                transform: translate(-50%, -50%);
+                                                top: 50%;
+                                                left: 50%;
+                                            "></i></p>`
                 }
             }
         }

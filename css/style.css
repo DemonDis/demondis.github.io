@@ -8318,37 +8318,6 @@ a[data-toggle="collapse"] {
   padding-bottom: 7px;
 }
 
-.icon-container {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  background: rgb(35,39,43);
-  background: linear-gradient(60deg, rgba(35,39,43,1) 0%, rgba(209,210,210,1) 89%, rgba(255,255,255,1) 100%); 
-  border-radius: 50%;
-  margin: auto;
-}
-
-.icon-set .fa-leanpub{
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-}
-
-.icon-set  .fa-cloud {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-}
-
-.icon-set .fa-cog{
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-}
-
 .icon-set {
   margin-left: 1px;
 }
