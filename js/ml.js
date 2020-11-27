@@ -1,6 +1,6 @@
 
         function loadTrain(){
-            document.getElementById('tableHeading').innerHTML=`<span class="fa fa-leanpub"></span> Логи обучения`;
+            document.getElementById('logHeading').innerHTML=`<span class="fa fa-leanpub"></span> Логи обучения`;
             BlockButton ()
             // 1. Создаём новый XMLHttpRequest-объект
             let xhr = new XMLHttpRequest(); // у конструктора нет аргументов
@@ -21,7 +21,7 @@
         }
 
         function loadBatch(){
-            document.getElementById('tableHeading').innerHTML=`<span class="fa fa-cloud"></span> Логи прогноза`;
+            document.getElementById('logHeading').innerHTML=`<span class="fa fa-cloud"></span> Логи прогноза`;
             BlockButton ()
             let xhr = new XMLHttpRequest();
             // xhr.open("GET", "http://192.168.91.48:5000/batch_inf", true);
@@ -38,7 +38,7 @@
         }
 
         function loadEvaluate(){
-            document.getElementById('tableHeading').innerHTML=`<span class="fa fa-cog"></span> Логи оценки`;
+            document.getElementById('logHeading').innerHTML=`<span class="fa fa-cog"></span> Логи оценки`;
             BlockButton ()
             let xhr = new XMLHttpRequest();
             // xhr.open("GET", "http://192.168.91.48:5000/evaluate", true);
@@ -61,22 +61,34 @@
             xhr.open("GET", "/part_log", true);
             xhr.send();
             xhr.onload = function() {
-                let responseObj = xhr.response
-                // let responseObj =  
-                //     {   
-                //         0: 'Wed Sep 30 13:16:20 2020 : начало<br />', 
-                //         1: 'Wed Sep 30 13:16:20 2020 : init end mod<br />', 
-                //         2: 'Wed Sep 30 13:16:20 2020 : модель оценка<br />', 
-                //         3: 'Wed Sep 30 13:16:20 2020 : eval start<br />', 
-                //         4: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/models_n<br />', 
-                //         5: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/eval<br />', 
-                //         6: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/eval<br />', 
-                //         7: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/output<br />', 
-                //         8: 'Wed Sep 30 13:16:20 2020 : eval step1<br />', 
-                //         9: 'Wed Sep 30 13:16:20 2020 : eval step2<br />', 
-                //         10: 'Wed Sep 30 13:16:20 2020 : eval step3<br />', 
-                //         11: 'Wed Sep 30 13:16:20 2020 : read_all<br />',
-                //     }
+                // let responseObj = xhr.response
+                let responseObj =  
+                    {   
+                        0: 'Wed Sep 30 13:16:20 2020 : начало<br />', 
+                        1: 'Wed Sep 30 13:16:20 2020 : init end mod<br />', 
+                        2: 'Wed Sep 30 13:16:20 2020 : модель оценка<br />', 
+                        3: 'Wed Sep 30 13:16:20 2020 : eval start<br />', 
+                        4: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/models_n<br />', 
+                        5: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/eval<br />', 
+                        6: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/eval<br />', 
+                        7: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/output<br />', 
+                        8: 'Wed Sep 30 13:16:20 2020 : eval step1<br />', 
+                        9: 'Wed Sep 30 13:16:20 2020 : eval step2<br />', 
+                        10: 'Wed Sep 30 13:16:20 2020 : eval step3<br />', 
+                        11: 'Wed Sep 30 13:16:20 2020 : read_all<br />',
+                        12: 'Wed Sep 30 13:16:20 2020 : начало<br />', 
+                        13: 'Wed Sep 30 13:16:20 2020 : init end mod<br />', 
+                        14: 'Wed Sep 30 13:16:20 2020 : модель оценка<br />', 
+                        15: 'Wed Sep 30 13:16:20 2020 : eval start<br />', 
+                        16: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/models_n<br />', 
+                        17: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/eval<br />', 
+                        18: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/eval<br />', 
+                        19: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/output<br />', 
+                        20: 'Wed Sep 30 13:16:20 2020 : eval step1<br />', 
+                        21: 'Wed Sep 30 13:16:20 2020 : eval step2<br />', 
+                        22: 'Wed Sep 30 13:16:20 2020 : eval step3<br />', 
+                        23: 'Wed Sep 30 13:16:20 2020 : read_all<br />',
+                    }
                 // $(".logInfo2").text((key)=>`${key} = ${responseObj[key]}`);
                 document.getElementById("logInfo").innerHTML = JSON.stringify(responseObj);
                     console.log('loadLog start');
@@ -90,14 +102,14 @@
             xhr.send();
             xhr.responseType = 'json';
             xhr.onload = function() {
-                let responseObjMatrix = xhr.response
-                // responseObjMatrix =  [ 
-                //     [1, 2, 3, 4, 5], 
-                //     [6, 7, 8, 9, 10], 
-                //     [11, 12, 13, 14, 15],
-                //     [16, 17, 18, 19, 20],
-                //     [21, 22, 23, 24, 25]
-                // ]
+                // let responseObjMatrix = xhr.response
+                responseObjMatrix =  [ 
+                    [1, 2, 3, 4, 5], 
+                    [6, 7, 8, 9, 10], 
+                    [11, 12, 13, 14, 15],
+                    [16, 17, 18, 19, 20],
+                    [21, 22, 23, 24, 25]
+                ]
                 // responseObjMatrix =  [ 
                 //     [1, 2, 3], 
                 //     [6, 7, 8], 
@@ -136,8 +148,8 @@
             xhr.open("GET", "/accuracy", true);
             xhr.send();
             xhr.onload = function() {
-                let responseObjAccuracy = xhr.response
-                // let responseObjAccuracy = 0.894562222222222222222222222222222222222222222
+                // let responseObjAccuracy = xhr.response
+                let responseObjAccuracy = 0.894562222222222222222222222222222222222222222
                 document.getElementById("accuracyNumber").innerHTML = responseObjAccuracy;
                     console.log('loadAccuracy start');
             }
@@ -150,14 +162,14 @@
             xhr.send();
             xhr.responseType = 'json';
             xhr.onload = function() {
-                let responseObjParams = xhr.response
-                // responseObjParams =  [ 
-                //     "/home/sav/nn/data/dbn", 
-                //     "/home/sav/nn/data/models_n", 
-                //     "/home/sav/nn/data/input", 
-                //     "/home/sav/nn/data/output", 
-                //     "/home/sav/nn/data/eval"
-                // ]
+                // let responseObjParams = xhr.response
+                responseObjParams =  [ 
+                    `<i class="fa fa-folder-open"></i>:/home/sav/nn/data/dbn`, 
+                    `<i class="fa fa-folder-open"></i>:/home/sav/nn/data/models_n`, 
+                    `<i class="fa fa-folder-open"></i>:/home/sav/nn/data/input`, 
+                    `<i class="fa fa-folder-open"></i>:/home/sav/nn/data/output`, 
+                    `<i class="fa fa-folder-open"></i>:/home/sav/nn/data/eval`
+                ]
                 document.getElementById("dbn").innerHTML = responseObjParams[0];
                 document.getElementById("models_n").innerHTML = responseObjParams[1];
                 document.getElementById("input").innerHTML = responseObjParams[2];

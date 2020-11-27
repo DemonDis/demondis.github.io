@@ -60,7 +60,7 @@
                           <li class="list-group-item d-flex justify-content-between lh-condensed">
                             <div class="">
                               <h5 style="font-size: 18px;">Данные для обучения модели</h5>
-                              <h6 class="my-0" style="font-size: 14px;"><i class="fa fa-folder-open"></i>:/home/sav/nn/data/dbn</h6>
+                              <h6 id="dbn" class="my-0" style="font-size: 14px;"><i class="fa fa-folder-open"></i>:/home/sav/nn/data/dbn</h6>
                               <!-- <p class="icon-container">
                                 <i class="fa fa-folder" style="font-size:25px;color:white"></i>
                               </p> -->
@@ -72,7 +72,7 @@
                             <li class="list-group-item d-flex justify-content-between lh-condensed">
                               <div class="">
                                 <h5 style="font-size: 18px;">Файлы обученной модели</h5>
-                                <h6 class="my-0" style="font-size: 14px;"><i class="fa fa-folder-open"></i>:/home/sav/nn/data/models_nt</h6>
+                                <h6  id="models_n" class="my-0" style="font-size: 14px;"><i class="fa fa-folder-open"></i></h6>
                               </div>
                             </li>
                           </ul>
@@ -81,7 +81,7 @@
                             <li class="list-group-item d-flex justify-content-between lh-condensed">
                               <div class="">
                                 <h5 style="font-size: 18px;">Данные для прогноза</h5>
-                                <h6 class="my-0" style="font-size: 14px;"><i class="fa fa-folder-open"></i>:/home/sav/nn/data/input</h6>
+                                <h6  id="input" class="my-0" style="font-size: 14px;"><i class="fa fa-folder-open"></i></h6>
                               </div>
                             </li>
                           </ul>
@@ -90,7 +90,7 @@
                             <li class="list-group-item d-flex justify-content-between lh-condensed">
                               <div class="">
                                 <h5 style="font-size: 18px;">Результаты прогноза</h5>
-                                <h6 class="my-0" style="font-size: 14px;"><i class="fa fa-folder-open"></i>:/home/sav/nn/data/output</h6>
+                                <h6 id="output" class="my-0" style="font-size: 14px;"><i class="fa fa-folder-open"></i></h6>
                               </div>
                             </li>
                           </ul>
@@ -99,7 +99,7 @@
                             <li class="list-group-item d-flex justify-content-between lh-condensed">
                               <div class="">
                                 <h5 style="font-size: 18px;">Данные для оценки метрик</h5>
-                                <h6 class="my-0" style="font-size: 14px;"><i class="fa fa-folder-open"></i>:/home/sav/nn/data/eval</h6>
+                                <h6 id="eval" class="my-0" style="font-size: 14px;"><i class="fa fa-folder-open"></i></h6>
                               </div>
                             </li>
                           </ul>
@@ -108,7 +108,7 @@
 
                 </div>
               
-                <!-- Table -->
+                
                 <div class="col-11 col-sm-11 col-md-12 col-lg-12 col-xl">
                   <div class="row mx-0 shadow-sm bg-white rounded pb-0">
                       <div class="card shadow-none w-100">
@@ -124,15 +124,18 @@
                                               <button type="button" class="btn-dark btn-sm" disabled>ACC</button>
                                           </div>
                                           <div class="col-4">
-                                            <h6 class="my-0 btn-sm shadow-sm rounded" style="font-size: 14px; background-color: rgba(0, 0, 0, 0.03); color: black; border: 1px solid rgb(35,39,43);">0.89383838383</h6>
+                                            <h6 id="accuracyNumber" class="my-0 btn-sm shadow-sm rounded" style="font-size: 14px; background-color: rgba(0, 0, 0, 0.03); color: black; border: 1px solid rgb(35,39,43);"></h6>
                                           </div>
                                       </div>
                                   </div>
                               </div>
                               <!-- Accuracy Number -->
-                              <table id="datatables-buttons" class="table table-bordered table-striped table-hover font-size-md shadow-sm bg-white rounded"
+
+                              <!-- Table -->
+                              <div  id="stat">
+                              <table id="datatables-buttons" class="table table-bordered table-striped shadow mb-1 bg-white rounded"
                                   style="width:100%">
-                                  <thead>
+                                  <thead class="text-center">
                                       <tr>
                                           <th scope="col">#</th>
                                           <th scope="col">Класс 1</th>
@@ -141,7 +144,7 @@
                                           <th scope="col">Класс 4</th>
                                           <th scope="col">Класс 5</th>
                                   </thead>
-                                  <tbody>
+                                  <tbody class="text-center">
                                       <tr>
                                           <th scope="col">Класс 1</th>
                                           <td>0</td>
@@ -184,6 +187,7 @@
                                       </tr>
                                   </tbody>
                               </table>
+                              </div>
                           </div>
                       </div>
                   </div>
@@ -193,33 +197,10 @@
                     <div class="row mx-0 shadow-sm bg-white rounded pb-0">
                         <div class="card shadow-none w-100">
                             <div class="card-header px-4 pb-0">
-                                <h2 id="tableHeading" class="card-title" style="font-size: 28px;">Логи</h2>
+                                <h2 id="logHeading" class="card-title" style="font-size: 28px;">Логи</h2>
                             </div>
-                              <div id="tableHeading" class="card-body overflow-auto" style="height: 270px; color: black;">
-                                0: 'Wed Sep 30 13:16:20 2020 : начало<br />', 
-                                1: 'Wed Sep 30 13:16:20 2020 : init end mod<br />', 
-                                2: 'Wed Sep 30 13:16:20 2020 : модель оценка<br />', 
-                                3: 'Wed Sep 30 13:16:20 2020 : eval start<br />', 
-                                4: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/models_n<br />', 
-                                5: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/eval<br />', 
-                                6: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/eval<br />', 
-                                7: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/output<br />', 
-                                8: 'Wed Sep 30 13:16:20 2020 : eval step1<br />', 
-                                9: 'Wed Sep 30 13:16:20 2020 : eval step2<br />', 
-                                10: 'Wed Sep 30 13:16:20 2020 : eval step3<br />', 
-                                11: 'Wed Sep 30 13:16:20 2020 : read_all<br />',
-                                0: 'Wed Sep 30 13:16:20 2020 : начало<br />', 
-                                1: 'Wed Sep 30 13:16:20 2020 : init end mod<br />', 
-                                2: 'Wed Sep 30 13:16:20 2020 : модель оценка<br />', 
-                                3: 'Wed Sep 30 13:16:20 2020 : eval start<br />', 
-                                4: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/models_n<br />', 
-                                5: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/eval<br />', 
-                                6: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/eval<br />', 
-                                7: 'Wed Sep 30 13:16:20 2020 : /home/sav/nn/data/output<br />', 
-                                8: 'Wed Sep 30 13:16:20 2020 : eval step1<br />', 
-                                9: 'Wed Sep 30 13:16:20 2020 : eval step2<br />', 
-                                10: 'Wed Sep 30 13:16:20 2020 : eval step3<br />', 
-                                11: 'Wed Sep 30 13:16:20 2020 : read_all<br />',
+                              <div id="logInfo" class="card-body overflow-auto" style="height: 300px; color: black;">
+
                               </div>
                         </div>
                     </div>
