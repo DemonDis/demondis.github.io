@@ -1,6 +1,21 @@
+        function addIConFolder (functionName) {
+            var elements = document.querySelectorAll('.icon-set')
+            for(var i = 0; i < elements.length; i++) {
+                if (functionName === 'loadTrain'){
+                    elements[i].innerHTML=`<p class="icon-container"><i class="fa fa-leanpub" style="font-size:18px;color:white"></i></p>`
+                } else if (functionName === 'loadBatch') {
+                    elements[i].innerHTML=`<p class="icon-container"><i class="fa fa-cloud" style="font-size:18px;color:white"></i></p>`
+                } else if (functionName === 'loadEvaluate') {
+                    elements[i].innerHTML=`<p class="icon-container"><i class="fa fa-cog" style="font-size:18px;color:white"></i></p>`
+                }
+            }
+        }
 
         function loadTrain(){
             document.getElementById('logHeading').innerHTML=`<span class="fa fa-leanpub"></span> Логи обучения`;
+            document.getElementById('tableHeading').innerHTML=`<span class="fa fa-leanpub"></span> Матрица результатов обучения`;
+            addIConFolder ('loadTrain')
+            // document.getElementById('folderIcon',).innerHTML=`<p class="icon-container"><i class="fa fa-leanpub" style="font-size:18px;color:white"></i></p>`;
             BlockButton ()
             // 1. Создаём новый XMLHttpRequest-объект
             let xhr = new XMLHttpRequest(); // у конструктора нет аргументов
@@ -22,6 +37,8 @@
 
         function loadBatch(){
             document.getElementById('logHeading').innerHTML=`<span class="fa fa-cloud"></span> Логи прогноза`;
+            document.getElementById('tableHeading').innerHTML=`<span class="fa fa-cloud"></span> Матрица результатов прогноза`;
+            addIConFolder ('loadBatch')
             BlockButton ()
             let xhr = new XMLHttpRequest();
             // xhr.open("GET", "http://192.168.91.48:5000/batch_inf", true);
@@ -39,6 +56,8 @@
 
         function loadEvaluate(){
             document.getElementById('logHeading').innerHTML=`<span class="fa fa-cog"></span> Логи оценки`;
+            document.getElementById('tableHeading').innerHTML=`<span class="fa fa-cog"></span> Матрица результатов оценки`;
+            addIConFolder ('loadEvaluate')
             BlockButton ()
             let xhr = new XMLHttpRequest();
             // xhr.open("GET", "http://192.168.91.48:5000/evaluate", true);

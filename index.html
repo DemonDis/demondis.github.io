@@ -58,13 +58,11 @@
 
                         <ul class="list-group shadow-sm bg-white rounded mb-3">
                           <li class="list-group-item d-flex justify-content-between lh-condensed">
-                            <div class="">
+                            <div class="asd">
                               <h5 style="font-size: 18px;">Данные для обучения модели</h5>
                               <h6 id="dbn" class="my-0" style="font-size: 14px;"><i class="fa fa-folder-open"></i>:/home/sav/nn/data/dbn</h6>
-                              <!-- <p class="icon-container">
-                                <i class="fa fa-folder" style="font-size:25px;color:white"></i>
-                              </p> -->
                             </div>
+                            <div name="folderIcon" id="folderIcon" class="row icon-set"></div>
                           </li>
                         </ul>
                         
@@ -74,6 +72,7 @@
                                 <h5 style="font-size: 18px;">Файлы обученной модели</h5>
                                 <h6  id="models_n" class="my-0" style="font-size: 14px;"><i class="fa fa-folder-open"></i></h6>
                               </div>
+                              <div id="folderIcon2" class="row icon-set"></div>
                             </li>
                           </ul>
                           
@@ -83,6 +82,7 @@
                                 <h5 style="font-size: 18px;">Данные для прогноза</h5>
                                 <h6  id="input" class="my-0" style="font-size: 14px;"><i class="fa fa-folder-open"></i></h6>
                               </div>
+                              <div id="folderIcon" class="row icon-set"></div>
                             </li>
                           </ul>
 
@@ -92,6 +92,7 @@
                                 <h5 style="font-size: 18px;">Результаты прогноза</h5>
                                 <h6 id="output" class="my-0" style="font-size: 14px;"><i class="fa fa-folder-open"></i></h6>
                               </div>
+                              <div id="folderIcon" class="row icon-set"></div>
                             </li>
                           </ul>
 
@@ -101,6 +102,7 @@
                                 <h5 style="font-size: 18px;">Данные для оценки метрик</h5>
                                 <h6 id="eval" class="my-0" style="font-size: 14px;"><i class="fa fa-folder-open"></i></h6>
                               </div>
+                              <div id="folderIcon" class="row icon-set"></div>
                             </li>
                           </ul>
 
@@ -113,7 +115,7 @@
                   <div class="row mx-0 shadow-sm bg-white rounded pb-0">
                       <div class="card shadow-none w-100">
                           <div class="card-header px-4 pb-0">
-                              <h2 class="card-title" style="font-size: 28px;">Матрица результатов</h2>
+                              <h2 id="tableHeading" class="card-title" style="font-size: 28px;">Матрица результатов</h2>
                           </div>
                           <div class="card-body">
                                 <!-- Accuracy Number -->
@@ -132,7 +134,7 @@
                               <!-- Accuracy Number -->
 
                               <!-- Table -->
-                              <div  id="stat">
+                              <div id="stat">
                               <table id="datatables-buttons" class="table table-bordered table-striped shadow mb-1 bg-white rounded"
                                   style="width:100%">
                                   <thead class="text-center">
