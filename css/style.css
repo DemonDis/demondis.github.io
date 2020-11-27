@@ -8307,7 +8307,6 @@ a[data-toggle="collapse"] {
 
 .card_inner > span {
     font-size: 25px;
-
 }
 
 .underline-text {
@@ -8320,4 +8319,17 @@ a[data-toggle="collapse"] {
 
 .icon-set {
   margin-left: 1px;
+}
+
+.alert-message .alert-icon {
+  width: 4rem;
+  font-size: 1.5rem;
+}
+
+.alert-message .close{
+  font-size: 1rem;
+  color: #6591c1;
+}
+.alert-primary .alert-icon {
+  background-color: #b8daff;
 }

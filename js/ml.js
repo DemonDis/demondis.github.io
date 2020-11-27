@@ -1,3 +1,11 @@
+        $(function(){
+            $('.alert').on('close.bs.alert', function(){
+                $('.result').append('<li>Сейчас будет закрыто сообщение (alert)</li>');
+            });
+            $('.alert').on('closed.bs.alert', function(){
+                $('.result').append('<li>Сообщение (alert) уже закрыто</li>');
+            });
+        });
         function addIConFolder (functionName) {
             var elements = document.querySelectorAll('.icon-set')
             for(var i = 0; i < elements.length; i++) {
@@ -63,21 +71,12 @@
             document.getElementById('logHeading').innerHTML=`<span class="fa fa-leanpub"></span> Логи обучения`;
             document.getElementById('tableHeading').innerHTML=`<span class="fa fa-leanpub"></span> Матрица результатов обучения`;
             addIConFolder ('loadTrain')
-            // document.getElementById('folderIcon',).innerHTML=`<p class="icon-container"><i class="fa fa-leanpub" style="font-size:18px;color:white"></i></p>`;
             BlockButton ()
-            // 1. Создаём новый XMLHttpRequest-объект
-            let xhr = new XMLHttpRequest(); // у конструктора нет аргументов
-            // 2. Настраиваем его: GET-запрос по URL /article/.../load
-            // xhr.open("GET", "http://192.168.91.48:5000/train", true);
+            let xhr = new XMLHttpRequest();
             xhr.open("GET", "/train", true);
-            // 3. Отсылаем запрос
             xhr.send();
-            // 4. Этот код сработает после того, как мы получим ответ сервера
             xhr.onload = function (){
                 document.getElementById("alertIn").innerHTML = xhr.responseText;
-                document.getElementById('alertHead').innerHTML="Обучение";
-                document.getElementById('heading').innerHTML= "Обучение";
-                document.getElementById("headPlus").innerHTML ="";
                     console.log('loadTrain start');
             }
             loadBlock()
@@ -89,14 +88,10 @@
             addIConFolder ('loadBatch')
             BlockButton ()
             let xhr = new XMLHttpRequest();
-            // xhr.open("GET", "http://192.168.91.48:5000/batch_inf", true);
             xhr.open("GET", "/batch_inf", true);
             xhr.send();
             xhr.onload = function () {
                 document.getElementById("alertIn").innerHTML = xhr.responseText;
-                document.getElementById('alertHead').innerHTML="Прогноз";
-                document.getElementById('heading').innerHTML= "Прогноз";
-                document.getElementById("headPlus").innerHTML ="";
                     console.log('loadBatch start');
             }
             loadBlock()
@@ -108,14 +103,10 @@
             addIConFolder ('loadEvaluate')
             BlockButton ()
             let xhr = new XMLHttpRequest();
-            // xhr.open("GET", "http://192.168.91.48:5000/evaluate", true);
             xhr.open("GET", "/evaluate", true);
             xhr.send();
             xhr.onload = function (){
                 document.getElementById("alertIn").innerHTML = xhr.responseText;
-                document.getElementById('alertHead').innerHTML="Оценка";
-                document.getElementById('heading').innerHTML= "Оценка";
-                document.getElementById("headPlus").innerHTML ="";
                     console.log('loadEvaluate start');
             }
             loadBlock()
@@ -124,7 +115,6 @@
         function loadLog(){
             let xhr = new XMLHttpRequest();
             // xhr.open("GET", "/log", true);
-            // xhr.open("GET", "http://192.168.91.48:5000/part_log", true);
             xhr.open("GET", "/part_log", true);
             xhr.send();
             xhr.onload = function() {
@@ -164,7 +154,6 @@
 
         function loadMatrix(){
             let xhr = new XMLHttpRequest();
-            // xhr.open("GET", "http://192.168.91.48:5000/matrix", true);
             xhr.open("GET", "/matrix", true);
             xhr.send();
             xhr.responseType = 'json';
@@ -211,7 +200,6 @@
 
         function loadAccuracy(){
             let xhr = new XMLHttpRequest();
-            // xhr.open("GET", "http://192.168.91.48:5000/accuracy", true);
             xhr.open("GET", "/accuracy", true);
             xhr.send();
             xhr.onload = function() {
@@ -278,10 +266,6 @@
                     , 100);
                     UnBlockButton()
                         document.getElementById("alertIn").innerHTML = "Операция завершена";
-                        document.getElementById("headPlus").innerHTML = `
-                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-check-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="margin-left:10px; color:MediumSeaGreen">
-                            <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                            </svg>`;
                     console.log(`Block else if - ${responseObjBlock}`);
                     setTimeout(() => 
                         console.log('END ALL')
@@ -292,17 +276,17 @@
         }
 
         function UnBlockButton (){
-            document.getElementById('buttonLoadTrain').removeAttribute("disabled"),
-            document.getElementById('buttonLoadEvaluate').removeAttribute("disabled"),
-            document.getElementById('buttonLoadBatch').removeAttribute("disabled")
-                $('.toast').toast('show')
+                $(".alert").alert('show')
+            // setTimeout(() =>
+            //     $(".alert").alert('close') 
+            // , 3000);
             console.log('UnBlock Button');
         }
 
         function BlockButton (){
-            document.getElementById('buttonLoadTrain').setAttribute("disabled", "true");
-            document.getElementById('buttonLoadBatch').setAttribute("disabled", "true");
-            document.getElementById('buttonLoadEvaluate').setAttribute("disabled", "true");
-                $('.toast').toast('show')
+                $(".alert").alert('show')
+            // setTimeout(() =>
+            //     $(".alert").alert('close') 
+            // , 3000);
             console.log('Block Button');
         }
