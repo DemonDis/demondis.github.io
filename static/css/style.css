@@ -8185,18 +8185,12 @@ h1, h2, h3, h4, h5,
     text-align: center; }
     #sidebar.active ul.components li {
       font-size: 14px; }
-      .imgFast{
-        height: 14px;
-        width: 14px; }
       #sidebar.active ul.components li a {
         padding: 10px 0; }
         #sidebar.active ul.components li a span {
           margin-right: 0;
           display: block;
           font-size: 24px; }
-        #sidebar.active ul.components li a .imgFast{
-          height: 24px;
-          width: 24px; }
     #sidebar.active .logo {
       padding: 10px 0; }
     #sidebar.active .footer {
