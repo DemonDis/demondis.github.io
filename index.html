@@ -8,7 +8,6 @@
     
     <!-- #FAVICONS -->
     <link rel="shortcut icon" href="/static/img/favicon.png" type="static/img/png">
-    
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
@@ -26,14 +25,11 @@
                 <a id="buttonLoadTrain" onclick="loadTrain()"><span class="fa fa-leanpub"></span>Обучение</a>
               </li>
               <li>
-                <a id="buttonLoadBatch" onclick="loadBatch()"><span class="fa fa-cloud"></span>Прогноз</a>
+                  <a id="buttonLoadBatch" onclick="loadBatch()"><span class="fa fa-cloud"></span>Прогноз</a>
               </li>
               <li>
                 <a id="buttonLoadEvaluate" onclick="loadEvaluate()"><span class="fa fa-cog"></span>Оценка</a>
               </li>
-              <!-- <li>
-                <a href="fast.html" style="color: #DF467D;"><span><img class="imgFast" src="static/img/fast.png" alt="fast"></span>Fast</a>
-              </li> -->
             </ul>
         </nav>
 
@@ -49,30 +45,16 @@
           </nav>
 
           <!-- Alert -->
-          <div id="selectedAssets" class="alert alert-primary alert-message rounded p-0 alert-dismissible" role="alert" style="display:none">
+          <div class="alert alert-primary alert-message d-flex rounded p-0" role="alert">
             <div class="alert-icon d-flex justify-content-center align-items-center flex-grow-0 flex-shrink-0 py-3">
                 <i class="fa fa-bullhorn"></i>
             </div>
-              <div id="alertIn" class="d-flex align-items-center py-2 px-3">
+            <div id="alertIn" class="d-flex align-items-center py-2 px-3">
                 Информационное сообщение
-              </div>
-            <button type="button" id="closeAlert" class="close d-flex justify-content-center align-items-center flex-grow-0 flex-shrink-0 py-3" aria-label="Close">
-              <span aria-hidden="true" style="font-size: 1.5rem;">&times;</span>
-            </button>
-          </div>
-          <!-- Alert -->
-
-          <!-- Alert Success -->
-          <div id="alertSuccess" class="alert alert-success alert-message rounded p-0 alert-dismissible" role="alert" style="display:none">
-            <div class="alert-icon d-flex justify-content-center align-items-center flex-grow-0 flex-shrink-0 py-3" style="background-color: #c3e6cb;">
-                <i class="fa fa-chevron-circle-down"></i>
             </div>
-              <div id="alertInSuccess" class="d-flex align-items-center py-2 px-3">
-                Информационное сообщение
-              </div>
-            <button type="button" id="closeAlerSuccesst" class="close d-flex justify-content-center align-items-center flex-grow-0 flex-shrink-0 py-3" aria-label="Close">
-              <span aria-hidden="true" style="font-size: 1.5rem; color: #155724;">&times;</span>
-            </button>
+            <a href="#" class="close d-flex ml-auto justify-content-center align-items-center px-3" data-dismiss="alert">
+                <i class="fa fa-times"></i>
+            </a>
           </div>
           <!-- Alert -->
 
@@ -83,7 +65,7 @@
 
                         <ul class="list-group shadow-sm bg-white rounded mb-3">
                           <li class="list-group-item d-flex justify-content-between lh-condensed">
-                            <div class="">
+                            <div class="asd">
                               <h5 style="font-size: 18px;">Данные для обучения модели</h5>
                               <h6 id="dbn" class="my-0" style="font-size: 14px;"><i class="fa fa-folder-open"></i></h6>
                             </div>

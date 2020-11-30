@@ -69,8 +69,7 @@
             xhr.open("GET", "/train", true);
             xhr.send();
             xhr.onload = function (){
-                alertControl('#buttonLoadTrain')
-                $("#alertIn").html(xhr.responseText);
+                document.getElementById("alertIn").innerHTML = xhr.responseText;
                     console.log('loadTrain start');
             }
             loadBlock()
@@ -85,8 +84,7 @@
             xhr.open("GET", "/batch_inf", true);
             xhr.send();
             xhr.onload = function () {
-                alertControl('#buttonLoadBatch')
-                $("#alertIn").html(xhr.responseText);
+                document.getElementById("alertIn").innerHTML = xhr.responseText;
                     console.log('loadBatch start');
             }
             loadBlock()
@@ -101,8 +99,7 @@
             xhr.open("GET", "/evaluate", true);
             xhr.send();
             xhr.onload = function (){
-                alertControl('#buttonLoadEvaluate')
-                $("#alertIn").html(xhr.responseText);
+                document.getElementById("alertIn").innerHTML = xhr.responseText;
                     console.log('loadEvaluate start');
             }
             loadBlock()
@@ -200,7 +197,7 @@
             xhr.send();
             xhr.onload = function() {
                 // let responseObjAccuracy = xhr.response
-                let responseObjAccuracy = 0.89456222223
+                let responseObjAccuracy = 0.894562222222222222222222222222222222222222222
                 document.getElementById("accuracyNumber").innerHTML = responseObjAccuracy;
                     console.log('loadAccuracy start');
             }
@@ -208,6 +205,7 @@
 
         function loadParams(){
             let xhr = new XMLHttpRequest();
+            // xhr.open("GET", "http://192.168.91.48:5000/params", true);
             xhr.open("GET", "/params", true);
             xhr.send();
             xhr.responseType = 'json';
@@ -229,8 +227,9 @@
             }
         }
 
-        function loadBlock(){
+        function loadBlock(nameFunction){
             let xhr = new XMLHttpRequest();
+            // xhr.open("GET", "http://192.168.91.48:5000/block", true);
             xhr.open("GET", "/block", true);
             xhr.send();
             xhr.responseType = 'json';
@@ -259,9 +258,7 @@
                         loadParams()
                     , 100);
                     UnBlockButton()
-                        document.getElementById('alertSuccess').setAttribute("style", "display:flex;");
-                        $("#alertSuccess").show();
-                        $("#alertInSuccess").html('Операция завершена');
+                        document.getElementById("alertIn").innerHTML = "Операция завершена";
                     console.log(`Block else if - ${responseObjBlock}`);
                     setTimeout(() => 
                         console.log('END ALL')
@@ -272,55 +269,29 @@
         }
 
         function UnBlockButton (){
-            document.getElementById('buttonLoadBatch').setAttribute("style", "");
-            document.getElementById('buttonLoadEvaluate').setAttribute("style", "");
-            document.getElementById('buttonLoadTrain').setAttribute("style", "");
+                $(".alert").alert('show')
+            // setTimeout(() =>
+            //     $(".alert").alert('close') 
+            // , 3000);
             console.log('UnBlock Button');
         }
 
         function BlockButton (nameFunction){ 
             if (nameFunction === 'loadTrain') {
-                $("#selectedAssets").show();
-                document.getElementById('selectedAssets').setAttribute("style", "display:flex;");
-                setTimeout(() => 
-                    $("#selectedAssets").hide() 
-                , 4000);
-                document.getElementById('buttonLoadBatch').setAttribute("style", "display:none;");
-                document.getElementById('buttonLoadEvaluate').setAttribute("style", "display:none;");
+                // document.getElementById('buttonLoadBatch').setAttribute("style", "background:#fc7979;");
+                // document.getElementById('buttonLoadBatch').setAttribute("style", "background:#fc7979;");
+                // document.getElementById('buttonLoadEvaluate').setAttribute("style", "background:#fc7979;");
             } else if (nameFunction === 'loadBatch') {
-                $("#selectedAssets").show();
-                document.getElementById('selectedAssets').setAttribute("style", "display:flex;");
-                setTimeout(() => 
-                    $("#selectedAssets").hide() 
-                , 4000);
-                document.getElementById('buttonLoadTrain').setAttribute("style", "display:none;");
-                document.getElementById('buttonLoadEvaluate').setAttribute("style", "display:none;");
+                // document.getElementById('buttonLoadTrain').setAttribute("style", "background:#fc7979;");
+                // document.getElementById('buttonLoadEvaluate').setAttribute("style", "background:#fc7979;");
             } else if (nameFunction === 'loadEvaluate') {
-                $("#selectedAssets").show();
-                document.getElementById('selectedAssets').setAttribute("style", "display:flex;");
-                setTimeout(() => 
-                    $("#selectedAssets").hide() 
-                , 4000);
-                document.getElementById('buttonLoadBatch').setAttribute("style", "display:none;");
-                document.getElementById('buttonLoadTrain').setAttribute("style", "display:none;");
+                // document.getElementById('buttonLoadBatch').setAttribute("style", "background:#fc7979;");
+                // document.getElementById('buttonLoadTrain').setAttribute("style", "background:#fc7979;");
             }
+                $(".alert").alert('show')
+
+            // setTimeout(() =>
+            //     $(".alert").alert('close') 
+            // , 3000);
             console.log('Block Button');
         }
-
-        function alertControl(nameButton) {
-            console.log('Alert active', nameButton)
-            $(nameButton).on('click', function() {
-                document.getElementById('selectedAssets').setAttribute("style", "display:flex;");
-                $("#selectedAssets").show();
-                setTimeout(() => 
-                    $("#selectedAssets").hide() 
-                , 4000);
-            });
-        }
-
-        $('#closeAlert').on('click', function() {
-            $("#selectedAssets").hide();  
-        });
-        $('#closeAlerSuccesst').on('click', function() {
-            $("#alertSuccess").hide();  
-        });
