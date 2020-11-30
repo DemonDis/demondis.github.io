@@ -273,9 +273,9 @@
 
         function UnBlockButton (){
             alertControl();
-            document.getElementById('buttonLoadBatch').setAttribute("")
-            document.getElementById('buttonLoadEvaluate').setAttribute("")
-            document.getElementById('buttonLoadTrain').setAttribute("")
+            // document.getElementById('buttonLoadBatch').setAttribute("")
+            // document.getElementById('buttonLoadEvaluate').setAttribute("")
+            // document.getElementById('buttonLoadTrain').setAttribute("")
             console.log('UnBlock Button');
         }
 
@@ -283,16 +283,16 @@
             if (nameFunction === 'loadTrain') {
                 alertControl()
                 $("#alertIn").html('');
-                document.getElementById('buttonLoadBatch').setAttribute("style", "display:none;");
-                document.getElementById('buttonLoadEvaluate').setAttribute("style", "display:none;");
+                // document.getElementById('buttonLoadBatch').setAttribute("style", "display:none;");
+                // document.getElementById('buttonLoadEvaluate').setAttribute("style", "display:none;");
             } else if (nameFunction === 'loadBatch') {
                 alertControl()
-                document.getElementById('buttonLoadTrain').setAttribute("style", "display:none;");
-                document.getElementById('buttonLoadEvaluate').setAttribute("style", "display:none;");
+                // document.getElementById('buttonLoadTrain').setAttribute("style", "display:none;");
+                // document.getElementById('buttonLoadEvaluate').setAttribute("style", "display:none;");
             } else if (nameFunction === 'loadEvaluate') {
                 alertControl()
-                document.getElementById('buttonLoadBatch').setAttribute("style", "display:none;");
-                document.getElementById('buttonLoadTrain').setAttribute("style", "display:none;");
+                // document.getElementById('buttonLoadBatch').setAttribute("style", "display:none;");
+                // document.getElementById('buttonLoadTrain').setAttribute("style", "display:none;");
             }
             console.log('Block Button');
         }
