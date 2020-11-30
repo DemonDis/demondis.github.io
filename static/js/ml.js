@@ -259,7 +259,7 @@
                         loadParams()
                     , 100);
                     UnBlockButton()
-                        document.getElementById('alertSuccess').setAttribute("style", "display:flex;");
+                        // document.getElementById('alertSuccess').setAttribute("style", "display:flex;");
                         $("#alertSuccess").show();
                         $("#alertInSuccess").html('Операция завершена');
                     console.log(`Block else if - ${responseObjBlock}`);
@@ -300,7 +300,7 @@
         function alertControl(nameButton) {
             console.log('Alert active', nameButton)
             $(nameButton).on('click', function() {
-                document.getElementById('selectedAssets').setAttribute("style", "display:flex;");
+                // document.getElementById('selectedAssets').setAttribute("style", "display:flex;");
                 $("#selectedAssets").show();
                 setTimeout(() => 
                     $("#selectedAssets").hide() 
