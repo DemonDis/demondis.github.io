@@ -259,7 +259,7 @@
                         loadParams()
                     , 100);
                     UnBlockButton()
-                        // document.getElementById('alertSuccess').setAttribute("style", "display:flex;");
+                        document.getElementById('alertSuccess').setAttribute("style", "display:flex;");
                         $("#alertSuccess").show();
                         $("#alertInSuccess").html('Операция завершена');
                     console.log(`Block else if - ${responseObjBlock}`);
@@ -273,9 +273,9 @@
 
         function UnBlockButton (){
             alertControl();
-            // document.getElementById('buttonLoadBatch').setAttribute("")
-            // document.getElementById('buttonLoadEvaluate').setAttribute("")
-            // document.getElementById('buttonLoadTrain').setAttribute("")
+            document.getElementById('buttonLoadBatch').setAttribute("style", "")
+            document.getElementById('buttonLoadEvaluate').setAttribute("style", "")
+            document.getElementById('buttonLoadTrain').setAttribute("style", "")
             console.log('UnBlock Button');
         }
 
@@ -283,16 +283,16 @@
             if (nameFunction === 'loadTrain') {
                 alertControl()
                 $("#alertIn").html('');
-                // document.getElementById('buttonLoadBatch').setAttribute("style", "display:none;");
-                // document.getElementById('buttonLoadEvaluate').setAttribute("style", "display:none;");
+                document.getElementById('buttonLoadBatch').setAttribute("style", "display:none;");
+                document.getElementById('buttonLoadEvaluate').setAttribute("style", "display:none;");
             } else if (nameFunction === 'loadBatch') {
                 alertControl()
-                // document.getElementById('buttonLoadTrain').setAttribute("style", "display:none;");
-                // document.getElementById('buttonLoadEvaluate').setAttribute("style", "display:none;");
+                document.getElementById('buttonLoadTrain').setAttribute("style", "display:none;");
+                document.getElementById('buttonLoadEvaluate').setAttribute("style", "display:none;");
             } else if (nameFunction === 'loadEvaluate') {
                 alertControl()
-                // document.getElementById('buttonLoadBatch').setAttribute("style", "display:none;");
-                // document.getElementById('buttonLoadTrain').setAttribute("style", "display:none;");
+                document.getElementById('buttonLoadBatch').setAttribute("style", "display:none;");
+                document.getElementById('buttonLoadTrain').setAttribute("style", "display:none;");
             }
             console.log('Block Button');
         }
@@ -300,7 +300,7 @@
         function alertControl(nameButton) {
             console.log('Alert active', nameButton)
             $(nameButton).on('click', function() {
-                // document.getElementById('selectedAssets').setAttribute("style", "display:flex;");
+                document.getElementById('selectedAssets').setAttribute("style", "display:flex;");
                 $("#selectedAssets").show();
                 setTimeout(() => 
                     $("#selectedAssets").hide() 
