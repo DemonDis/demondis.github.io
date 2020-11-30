@@ -273,9 +273,9 @@
 
         function UnBlockButton (){
             alertControl();
-            document.getElementById('buttonLoadBatch').setAttribute("style", "")
-            document.getElementById('buttonLoadEvaluate').setAttribute("style", "")
-            document.getElementById('buttonLoadTrain').setAttribute("style", "")
+            document.getElementById('buttonLoadBatch').setAttribute("")
+            document.getElementById('buttonLoadEvaluate').setAttribute("")
+            document.getElementById('buttonLoadTrain').setAttribute("")
             console.log('UnBlock Button');
         }
 
