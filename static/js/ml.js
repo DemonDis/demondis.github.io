@@ -69,10 +69,11 @@
             xhr.open("GET", "/train", true);
             xhr.send();
             xhr.onload = function (){
-                document.getElementById("alertIn").innerHTML = xhr.responseText;
+                alertControl('#buttonLoadTrain')
+                $("#alertIn").html(xhr.responseText);
                     console.log('loadTrain start');
             }
-            loadBlock()
+            loadBlock('#buttonLoadTrain')
         }
 
         function loadBatch(){
@@ -84,10 +85,11 @@
             xhr.open("GET", "/batch_inf", true);
             xhr.send();
             xhr.onload = function () {
-                document.getElementById("alertIn").innerHTML = xhr.responseText;
+                alertControl('#buttonLoadBatch')
+                $("#alertIn").html(xhr.responseText);
                     console.log('loadBatch start');
             }
-            loadBlock()
+            loadBlock('#buttonLoadBatch')
         }
 
         function loadEvaluate(){
@@ -99,10 +101,11 @@
             xhr.open("GET", "/evaluate", true);
             xhr.send();
             xhr.onload = function (){
-                document.getElementById("alertIn").innerHTML = xhr.responseText;
+                alertControl('#buttonLoadEvaluate')
+                $("#alertIn").html(xhr.responseText);
                     console.log('loadEvaluate start');
             }
-            loadBlock()
+            loadBlock('#buttonLoadEvaluate')
         }
 
         function loadLog(){
@@ -197,7 +200,7 @@
             xhr.send();
             xhr.onload = function() {
                 // let responseObjAccuracy = xhr.response
-                let responseObjAccuracy = 0.894562222222222222222222222222222222222222222
+                let responseObjAccuracy = 0.89456222223
                 document.getElementById("accuracyNumber").innerHTML = responseObjAccuracy;
                     console.log('loadAccuracy start');
             }
@@ -205,7 +208,6 @@
 
         function loadParams(){
             let xhr = new XMLHttpRequest();
-            // xhr.open("GET", "http://192.168.91.48:5000/params", true);
             xhr.open("GET", "/params", true);
             xhr.send();
             xhr.responseType = 'json';
@@ -229,7 +231,6 @@
 
         function loadBlock(nameFunction){
             let xhr = new XMLHttpRequest();
-            // xhr.open("GET", "http://192.168.91.48:5000/block", true);
             xhr.open("GET", "/block", true);
             xhr.send();
             xhr.responseType = 'json';
@@ -258,7 +259,9 @@
                         loadParams()
                     , 100);
                     UnBlockButton()
-                        document.getElementById("alertIn").innerHTML = "Операция завершена";
+                        document.getElementById('alertSuccess').setAttribute("style", "display:flex;");
+                        $("#alertSuccess").show();
+                        $("#alertInSuccess").html('Операция завершена');
                     console.log(`Block else if - ${responseObjBlock}`);
                     setTimeout(() => 
                         console.log('END ALL')
@@ -269,29 +272,45 @@
         }
 
         function UnBlockButton (){
-                $(".alert").alert('show')
-            // setTimeout(() =>
-            //     $(".alert").alert('close') 
-            // , 3000);
+            alertControl();
+            document.getElementById('buttonLoadBatch').setAttribute("style", "display:;")
+            document.getElementById('buttonLoadEvaluate').setAttribute("style", "display:;")
+            document.getElementById('buttonLoadTrain').setAttribute("style", "display:;")
             console.log('UnBlock Button');
         }
 
         function BlockButton (nameFunction){ 
             if (nameFunction === 'loadTrain') {
-                // document.getElementById('buttonLoadBatch').setAttribute("style", "background:#fc7979;");
-                // document.getElementById('buttonLoadBatch').setAttribute("style", "background:#fc7979;");
-                // document.getElementById('buttonLoadEvaluate').setAttribute("style", "background:#fc7979;");
+                alertControl()
+                $("#alertIn").html('');
+                document.getElementById('buttonLoadBatch').setAttribute("style", "display:none;");
+                document.getElementById('buttonLoadEvaluate').setAttribute("style", "display:none;");
             } else if (nameFunction === 'loadBatch') {
-                // document.getElementById('buttonLoadTrain').setAttribute("style", "background:#fc7979;");
-                // document.getElementById('buttonLoadEvaluate').setAttribute("style", "background:#fc7979;");
+                alertControl()
+                document.getElementById('buttonLoadTrain').setAttribute("style", "display:none;");
+                document.getElementById('buttonLoadEvaluate').setAttribute("style", "display:none;");
             } else if (nameFunction === 'loadEvaluate') {
-                // document.getElementById('buttonLoadBatch').setAttribute("style", "background:#fc7979;");
-                // document.getElementById('buttonLoadTrain').setAttribute("style", "background:#fc7979;");
+                alertControl()
+                document.getElementById('buttonLoadBatch').setAttribute("style", "display:none;");
+                document.getElementById('buttonLoadTrain').setAttribute("style", "display:none;");
             }
-                $(".alert").alert('show')
-
-            // setTimeout(() =>
-            //     $(".alert").alert('close') 
-            // , 3000);
             console.log('Block Button');
         }
+
+        function alertControl(nameButton) {
+            console.log('Alert active', nameButton)
+            $(nameButton).on('click', function() {
+                document.getElementById('selectedAssets').setAttribute("style", "display:flex;");
+                $("#selectedAssets").show();
+                setTimeout(() => 
+                    $("#selectedAssets").hide() 
+                , 4000);
+            });
+        }
+
+        $('#closeAlert').on('click', function() {
+            $("#selectedAssets").hide();  
+        });
+        $('#closeAlerSuccesst').on('click', function() {
+            $("#alertSuccess").hide();  
+        });

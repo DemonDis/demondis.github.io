@@ -31,9 +31,9 @@
               <li>
                 <a id="buttonLoadEvaluate" onclick="loadEvaluate()"><span class="fa fa-cog"></span>Оценка</a>
               </li>
-              <li>
+              <!-- <li>
                 <a href="fast.html" style="color: #DF467D;"><span><img class="imgFast" src="static/img/fast.png" alt="fast"></span>Fast</a>
-              </li>
+              </li> -->
             </ul>
         </nav>
 
@@ -49,16 +49,30 @@
           </nav>
 
           <!-- Alert -->
-          <div class="alert alert-primary alert-message d-flex rounded p-0" role="alert">
+          <div id="selectedAssets" class="alert alert-primary alert-message rounded p-0 alert-dismissible" role="alert" style="display:none">
             <div class="alert-icon d-flex justify-content-center align-items-center flex-grow-0 flex-shrink-0 py-3">
                 <i class="fa fa-bullhorn"></i>
             </div>
-            <div id="alertIn" class="d-flex align-items-center py-2 px-3">
+              <div id="alertIn" class="d-flex align-items-center py-2 px-3">
                 Информационное сообщение
+              </div>
+            <button type="button" id="closeAlert" class="close d-flex justify-content-center align-items-center flex-grow-0 flex-shrink-0 py-3" aria-label="Close">
+              <span aria-hidden="true" style="font-size: 1.5rem;">&times;</span>
+            </button>
+          </div>
+          <!-- Alert -->
+
+          <!-- Alert Success -->
+          <div id="alertSuccess" class="alert alert-success alert-message rounded p-0 alert-dismissible" role="alert" style="display:none">
+            <div class="alert-icon d-flex justify-content-center align-items-center flex-grow-0 flex-shrink-0 py-3" style="background-color: #c3e6cb;">
+                <i class="fa fa-chevron-circle-down"></i>
             </div>
-            <a href="#" class="close d-flex ml-auto justify-content-center align-items-center px-3" data-dismiss="alert">
-                <i class="fa fa-times"></i>
-            </a>
+              <div id="alertInSuccess" class="d-flex align-items-center py-2 px-3">
+                Информационное сообщение
+              </div>
+            <button type="button" id="closeAlerSuccesst" class="close d-flex justify-content-center align-items-center flex-grow-0 flex-shrink-0 py-3" aria-label="Close">
+              <span aria-hidden="true" style="font-size: 1.5rem; color: #155724;">&times;</span>
+            </button>
           </div>
           <!-- Alert -->
 
