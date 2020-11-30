@@ -272,25 +272,35 @@
         }
 
         function UnBlockButton (){
-            alertControl();
-            document.getElementById('buttonLoadBatch').setAttribute("style", "")
-            document.getElementById('buttonLoadEvaluate').setAttribute("style", "")
-            document.getElementById('buttonLoadTrain').setAttribute("style", "")
+            document.getElementById('buttonLoadBatch').setAttribute("style", "");
+            document.getElementById('buttonLoadEvaluate').setAttribute("style", "");
+            document.getElementById('buttonLoadTrain').setAttribute("style", "");
             console.log('UnBlock Button');
         }
 
         function BlockButton (nameFunction){ 
             if (nameFunction === 'loadTrain') {
-                alertControl()
-                $("#alertIn").html('');
+                $("#selectedAssets").show();
+                document.getElementById('selectedAssets').setAttribute("style", "display:flex;");
+                setTimeout(() => 
+                    $("#selectedAssets").hide() 
+                , 4000);
                 document.getElementById('buttonLoadBatch').setAttribute("style", "display:none;");
                 document.getElementById('buttonLoadEvaluate').setAttribute("style", "display:none;");
             } else if (nameFunction === 'loadBatch') {
-                alertControl()
+                $("#selectedAssets").show();
+                document.getElementById('selectedAssets').setAttribute("style", "display:flex;");
+                setTimeout(() => 
+                    $("#selectedAssets").hide() 
+                , 4000);
                 document.getElementById('buttonLoadTrain').setAttribute("style", "display:none;");
                 document.getElementById('buttonLoadEvaluate').setAttribute("style", "display:none;");
             } else if (nameFunction === 'loadEvaluate') {
-                alertControl()
+                $("#selectedAssets").show();
+                document.getElementById('selectedAssets').setAttribute("style", "display:flex;");
+                setTimeout(() => 
+                    $("#selectedAssets").hide() 
+                , 4000);
                 document.getElementById('buttonLoadBatch').setAttribute("style", "display:none;");
                 document.getElementById('buttonLoadTrain').setAttribute("style", "display:none;");
             }
