@@ -70,7 +70,8 @@
             xhr.send();
             xhr.onload = function (){
                 alertControl('#buttonLoadTrain')
-                $("#alertIn").html(xhr.responseText);
+                // $("#alertIn").html(xhr.responseText);
+                $("#alertIn").html('loadTrain');
                     console.log('loadTrain start');
             }
             loadBlock()
@@ -86,7 +87,8 @@
             xhr.send();
             xhr.onload = function () {
                 alertControl('#buttonLoadBatch')
-                $("#alertIn").html(xhr.responseText);
+                // $("#alertIn").html(xhr.responseText);
+                $("#alertIn").html('loadBatch');
                     console.log('loadBatch start');
             }
             loadBlock()
@@ -102,7 +104,8 @@
             xhr.send();
             xhr.onload = function (){
                 alertControl('#buttonLoadEvaluate')
-                $("#alertIn").html(xhr.responseText);
+                // $("#alertIn").html(xhr.responseText);
+                $("#alertIn").html('loadEvaluate');
                     console.log('loadEvaluate start');
             }
             loadBlock()
