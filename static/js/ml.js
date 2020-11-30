@@ -73,7 +73,7 @@
                 $("#alertIn").html(xhr.responseText);
                     console.log('loadTrain start');
             }
-            loadBlock('#buttonLoadTrain')
+            loadBlock()
         }
 
         function loadBatch(){
@@ -89,7 +89,7 @@
                 $("#alertIn").html(xhr.responseText);
                     console.log('loadBatch start');
             }
-            loadBlock('#buttonLoadBatch')
+            loadBlock()
         }
 
         function loadEvaluate(){
@@ -105,7 +105,7 @@
                 $("#alertIn").html(xhr.responseText);
                     console.log('loadEvaluate start');
             }
-            loadBlock('#buttonLoadEvaluate')
+            loadBlock()
         }
 
         function loadLog(){
@@ -229,7 +229,7 @@
             }
         }
 
-        function loadBlock(nameFunction){
+        function loadBlock(){
             let xhr = new XMLHttpRequest();
             xhr.open("GET", "/block", true);
             xhr.send();
